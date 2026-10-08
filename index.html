@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stackly - Performance Digital Marketing Agency | SEO, PPC &amp; Growth</title>
+  <meta name="description" content="Scale your brand revenue with Stackly Digital Marketing Agency. Certified Google &amp; Meta Partners delivering high-ROAS paid ads, technical SEO, viral social campaigns, and CRO.">
+  <meta name="keywords" content="digital marketing agency, performance marketing, SEO agency, PPC management, Meta ads, Google ads, conversion rate optimization, growth agency">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       NAVIGATION HEADER
+       ========================================== -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Stackly Digital Marketing Agency">
+        <img src="assets/logo.webp" alt="Stackly Digital Marketing Agency" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="packages.html" class="nav-link">Packages</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="signin.html" class="btn btn-outline btn-sm nav-signin-btn">Sign In</a>
+        <a href="get-started.html" class="btn btn-primary btn-sm nav-cta">Get Started</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         HERO SECTION (HOME)
+         ========================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <!-- Left Hero Text & Search Widget -->
+        <div class="hero-content">
+          <div class="pill-badge">
+            <span class="pulse-dot"></span>
+            <span><i class="bi bi-geo-alt-fill text-accent"></i> Headquartered in Salem, Tamil Nadu, India</span>
+          </div>
+
+          <h1 class="hero-title">
+            We Make Brands <span class="gradient-text">Impossible To Ignore</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Accelerate your revenue with high-ROAS paid media, enterprise SEO, viral social campaigns, and conversion rate optimization designed to turn clicks into profitable clients.
+          </p>
+
+          <!-- Glassmorphism Multi-Tab Digital Marketing Audit & Proposal Generator -->
+          <div class="search-widget" id="marketingAuditWidget">
+            <div class="search-tabs">
+              <button class="search-tab-btn active" data-tab="seo"><i class="bi bi-search"></i> SEO Audit</button>
+              <button class="search-tab-btn" data-tab="ppc"><i class="bi bi-graph-up-arrow"></i> Paid Ads (ROAS)</button>
+              <button class="search-tab-btn" data-tab="social"><i class="bi bi-share-fill"></i> Social &amp; CRO</button>
+            </div>
+
+            <form id="heroAuditForm" class="search-grid" onsubmit="event.preventDefault(); handleHeroAudit();">
+              <div class="search-field">
+                <label for="auditWebsite"><i class="bi bi-globe text-primary"></i> Website URL</label>
+                <input type="url" id="auditWebsite" placeholder="https://yourbrand.com" required>
+              </div>
+              <div class="search-field">
+                <label for="auditObjective"><i class="bi bi-bullseye text-primary"></i> Primary Objective</label>
+                <select id="auditObjective">
+                  <option value="scale_revenue" selected>Scale Revenue &amp; ROAS</option>
+                  <option value="rank_google">Rank #1 on Google (SEO)</option>
+                  <option value="lead_generation">High-Intent B2B Leads</option>
+                  <option value="brand_reach">Viral Brand Reach (Social)</option>
+                </select>
+              </div>
+              <div class="search-field">
+                <label for="auditBudget"><i class="bi bi-currency-rupee text-primary"></i> Monthly Ad Spend</label>
+                <select id="auditBudget">
+                  <option value="starter">₹50K - ₹2 Lakhs / mo</option>
+                  <option value="growth" selected>₹2 Lakhs - ₹10 Lakhs / mo</option>
+                  <option value="scale">₹10 Lakhs - ₹50 Lakhs / mo</option>
+                  <option value="enterprise">₹50 Lakhs+ Enterprise</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary" style="height: 48px; white-space: nowrap;">
+                <i class="bi bi-lightning-charge-fill"></i> Get Free Audit
+              </button>
+            </form>
+          </div>
+
+          <!-- Hero Trust Metrics Bar -->
+          <div class="hero-trust-bar">
+            <div class="trust-stat">
+              <span class="stat-number" data-target="350" data-suffix="+">350+</span>
+              <span class="stat-label">Brands Scaled</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-stat">
+              <span class="stat-number" data-target="4.8" data-suffix="x" data-decimal="1">4.8x</span>
+              <span class="stat-label">Average Campaign ROAS</span>
+            </div>
+            <div class="trust-divider"></div>
+            <div class="trust-stat">
+              <span class="stat-number" data-target="99.2" data-suffix="%" data-decimal="1">99.2%</span>
+              <span class="stat-label">Client Retention Rate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card with Floating Badges -->
+        <div class="hero-visual">
+          <div class="visual-card-wrapper">
+            <div class="hero-image-card" style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-glow); border: 1px solid var(--border-glow);">
+              <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=80" alt="Digital Marketing Strategy &amp; Analytics Dashboard" style="width: 100%; height: 480px; object-fit: cover; display: block;">
+              
+              <!-- Floating Badge 1: 4.8x ROAS -->
+              <div class="floating-badge-card pos-1" style="position: absolute; top: 20px; left: 20px; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-md); padding: 12px 18px; display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.4);">
+                <i class="bi bi-graph-up-arrow" style="color: #FB7185; font-size: 1.5rem;"></i>
+                <div>
+                  <strong style="display: block; font-size: 1.05rem; color: #FFFFFF; font-family: var(--font-heading);">4.8x Avg ROAS</strong>
+                  <span style="font-size: 0.8rem; color: #94A3B8;">Across Paid Ad Campaigns</span>
+                </div>
+              </div>
+
+              <!-- Floating Badge 2: Certified Agency -->
+              <div class="floating-badge-card pos-2" style="position: absolute; bottom: 24px; right: 20px; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-md); padding: 12px 18px; display: flex; align-items: center; gap: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.4);">
+                <i class="bi bi-shield-check" style="color: #10B981; font-size: 1.5rem;"></i>
+                <div>
+                  <strong style="display: block; font-size: 1.05rem; color: #FFFFFF; font-family: var(--font-heading);">Certified Agency</strong>
+                  <span style="font-size: 0.8rem; color: #94A3B8;">Google &amp; Meta Partners</span>
+                </div>
+              </div>
+
+              <!-- Floating Badge 3: Organic Growth -->
+              <div class="floating-badge-card pos-3" style="position: absolute; bottom: 95px; left: 20px; background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-md); padding: 10px 16px; display: flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.4);">
+                <i class="bi bi-lightning-charge-fill" style="color: #F59E0B; font-size: 1.25rem;"></i>
+                <div>
+                  <strong style="display: block; font-size: 0.95rem; color: #FFFFFF; font-family: var(--font-heading);">+320% Traffic</strong>
+                  <span style="font-size: 0.78rem; color: #FB7185;">Organic Growth Benchmark</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         AGENCY VALUE PILLARS (WHY STACKLY)
+         ========================================== -->
+    <section class="section-padding bg-alt">
+      <div class="container">
+        <div class="text-center" style="max-width: 780px; margin: 0 auto 3.5rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-award-fill text-accent"></i> The Stackly Performance Standard
+          </div>
+          <h2 class="section-title">Why 350+ Leading Brands Choose Stackly</h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            We eliminated bloated agency retainers, vanity metrics, and unverified promises. Every campaign is engineered for transparent, measurable revenue growth.
+          </p>
+        </div>
+
+        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+          <!-- Pillar 1 -->
+          <div class="service-card">
+            <div class="service-icon" style="background: rgba(6, 182, 212, 0.15); color: #F43F5E;">
+              <i class="bi bi-graph-up-arrow" style="font-size: 1.6rem;"></i>
+            </div>
+            <h3 class="service-card-title">ROAS-Focused Performance</h3>
+            <p class="service-card-desc">
+              We tie every rupee of ad spend to bottom-line return. Proprietary algorithmic bidding models optimize CAC and maximize profit margins.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="service-card">
+            <div class="service-icon" style="background: rgba(99, 102, 241, 0.15); color: #FB7185;">
+              <i class="bi bi-speedometer2" style="font-size: 1.6rem;"></i>
+            </div>
+            <h3 class="service-card-title">24/7 Live ROI Dashboards</h3>
+            <p class="service-card-desc">
+              No waiting for delayed monthly PDF reports. Monitor conversions, blended ROAS, organic rankings, and ad spend live in Looker Studio.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="service-card">
+            <div class="service-icon" style="background: rgba(16, 185, 129, 0.15); color: #10B981;">
+              <i class="bi bi-shield-check" style="font-size: 1.6rem;"></i>
+            </div>
+            <h3 class="service-card-title">Certified Ad Strategists</h3>
+            <p class="service-card-desc">
+              Official Google &amp; Meta Agency Partners. Direct priority account support, beta features, and first-party Conversions API telemetry.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="service-card">
+            <div class="service-icon" style="background: rgba(245, 158, 11, 0.15); color: #F59E0B;">
+              <i class="bi bi-bullseye" style="font-size: 1.6rem;"></i>
+            </div>
+            <h3 class="service-card-title">Rapid Creative Testing</h3>
+            <p class="service-card-desc">
+              In-house video editors, copywriters, and designers produce 20+ fresh ad variations monthly to fight ad fatigue and scale winning angles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT SECTION (DETAILED DOMAIN CONTENT)
+         ========================================== -->
+    <section class="section-padding" id="about">
+      <div class="container">
+        <div class="about-intro-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 3.5rem; align-items: center;">
+          <!-- Story Content with Unsplash Image -->
+          <div class="about-story-card">
+            <div style="height: 240px; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="Digital Marketing Agency Team &amp; Growth Studio" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div class="pill-badge" style="margin-bottom: 1rem;">
+              <i class="bi bi-graph-up text-accent"></i> Performance Growth Agency
+            </div>
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1.25rem; color: #FFFFFF; font-family: var(--font-heading); line-height: 1.2;">
+              Engineering Scalable Revenue &amp; <span class="gradient-text">Brand Growth</span>
+            </h2>
+            <p class="about-lead-text" style="font-size: 1.15rem; color: #E2E8F0; line-height: 1.7; margin-bottom: 1.25rem;">
+              We help high-growth startups, direct-to-consumer (D2C) brands, and enterprise companies dominate competitive digital channels through data-backed SEO, performance ads, and conversion optimization.
+            </p>
+            <p class="about-body-text" style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.75rem;">
+              Unlike traditional agencies that prioritize vanity metrics, we focus relentlessly on bottom-line return on investment (ROI). Our multi-disciplinary team pairs technical data science with creative storytelling to capture high-intent customers, lower CAC, and maximize customer lifetime value (LTV).
+            </p>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="about.html" class="btn btn-primary">Our Agency Story &rarr;</a>
+              <a href="#services" class="btn btn-outline">Explore Capabilities</a>
+            </div>
+          </div>
+
+          <!-- Numbers & Operational Metrics Box -->
+          <div class="about-metrics-box" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            <div class="about-metric-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
+              <span class="num" style="display: block; font-size: 2.5rem; font-weight: 800; color: var(--accent-cyan); font-family: var(--font-heading); margin-bottom: 0.25rem;">₹45Cr+</span>
+              <span class="label" style="font-size: 0.9rem; color: #E2E8F0; font-weight: 600;">Ad Spend Managed</span>
+              <small style="display: block; color: var(--text-dim); font-size: 0.75rem; margin-top: 0.25rem;">Meta, Google &amp; LinkedIn Ads</small>
+            </div>
+
+            <div class="about-metric-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
+              <span class="num" style="display: block; font-size: 2.5rem; font-weight: 800; color: #FB7185; font-family: var(--font-heading); margin-bottom: 0.25rem;">4.8x</span>
+              <span class="label" style="font-size: 0.9rem; color: #E2E8F0; font-weight: 600;">Average ROAS</span>
+              <small style="display: block; color: var(--text-dim); font-size: 0.75rem; margin-top: 0.25rem;">E-Commerce &amp; Lead Gen</small>
+            </div>
+
+            <div class="about-metric-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
+              <span class="num" style="display: block; font-size: 2.5rem; font-weight: 800; color: #10B981; font-family: var(--font-heading); margin-bottom: 0.25rem;">150+</span>
+              <span class="label" style="font-size: 0.9rem; color: #E2E8F0; font-weight: 600;">Brands Scaled</span>
+              <small style="display: block; color: var(--text-dim); font-size: 0.75rem; margin-top: 0.25rem;">Across India, US &amp; UAE</small>
+            </div>
+
+            <div class="about-metric-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
+              <span class="num" style="display: block; font-size: 2.5rem; font-weight: 800; color: #F59E0B; font-family: var(--font-heading); margin-bottom: 0.25rem;">99.2%</span>
+              <span class="label" style="font-size: 0.9rem; color: #E2E8F0; font-weight: 600;">Client Retention</span>
+              <small style="display: block; color: var(--text-dim); font-size: 0.75rem; margin-top: 0.25rem;">Long-Term Growth Partnerships</small>
+            </div>
+
+            <!-- Milestone Card across 2 columns -->
+            <div style="grid-column: 1 / -1; background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 27, 75, 0.9)); border: 1px solid var(--border-glow); border-radius: var(--radius-md); padding: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(6, 182, 212, 0.2); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); font-size: 1.25rem;">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                  <h4 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 2px;">Salem Central Travel Operations Desk</h4>
+                  <p style="color: var(--text-dim); font-size: 0.8125rem;">Junction Main Road, Five Roads, Salem - 636004</p>
+                </div>
+              </div>
+              <p style="color: #CBD5E1; font-size: 0.875rem; line-height: 1.5; margin: 0;">
+                Walk into our Salem head office anytime between 8:00 AM – 9:00 PM for custom itinerary planning, direct cab booking, or instant package confirmations.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agency Operations & Strategy Leadership -->
+        <div style="margin-top: 4.5rem;">
+          <div class="text-center" style="margin-bottom: 2.5rem;">
+            <span class="badge badge-subtle">Agency Leadership</span>
+            <h3 style="font-size: 1.85rem; color: #FFFFFF; font-family: var(--font-heading); margin-top: 0.5rem;">Meet Our Growth Strategists</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Performance media buyers, technical SEO architects, and conversion specialists.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem;">
+            <!-- Member 1 -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Sundaram S - Chief Marketing Director" style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.25rem auto; display: block; border: 3px solid var(--accent-cyan);">
+              <h4 style="color: #FFFFFF; font-size: 1.2rem; margin-bottom: 0.25rem;">Sundaram Shanmugam</h4>
+              <p style="color: var(--accent-cyan); font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem;">Founder &amp; Chief Growth Officer</p>
+              <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.5;">12+ years spearheading performance marketing funnels, enterprise SEO algorithms, and multi-million dollar ad spend scale.</p>
+            </div>
+
+            <!-- Member 2 -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Ananya R - Head of Performance &amp; Paid Media" style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.25rem auto; display: block; border: 3px solid #10B981;">
+              <h4 style="color: #FFFFFF; font-size: 1.2rem; margin-bottom: 0.25rem;">Ananya Ramakrishnan</h4>
+              <p style="color: #34D399; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem;">Head of Performance &amp; Paid Media</p>
+              <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.5;">Certified Meta &amp; Google Ads master who has scaled 80+ e-commerce &amp; SaaS brands to consistent 4.5x+ ROAS benchmarks.</p>
+            </div>
+
+            <!-- Member 3 -->
+            <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; text-align: center;">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Venkatesh B - Head of Technical SEO &amp; CRO" style="width: 84px; height: 84px; border-radius: 50%; object-fit: cover; margin: 0 auto 1.25rem auto; display: block; border: 3px solid #F59E0B;">
+              <h4 style="color: #FFFFFF; font-size: 1.2rem; margin-bottom: 0.25rem;">Venkatesh Babu</h4>
+              <p style="color: #FBBF24; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.75rem;">Head of Technical SEO &amp; CRO</p>
+              <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.5;">Specialist in Generative Engine Optimization (GEO), Core Web Vitals speed architectures, and landing page UX conversion experiments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES SECTION (DEEP DOMAIN CAPABILITIES)
+         ========================================== -->
+    <section class="section-padding bg-alt" id="services">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-stars text-accent"></i> Full-Stack Digital Marketing Capabilities
+          </div>
+          <h2 class="section-title">End-to-End <span>Digital Marketing Services</span></h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            From search engine dominance to high-converting ad funnels, explore our data-backed digital marketing solutions equipped with real-world Unsplash imagery.
+          </p>
+        </div>
+
+        <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+          <!-- Service 1: SEO -->
+          <div class="service-card-enhanced" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="height: 200px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Search Engine Optimization (SEO &amp; GEO)" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; right: 14px; background: rgba(15, 23, 42, 0.85); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;">High Intent</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.35rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.75rem;">Search Engine Optimization (SEO)</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Dominate Google rankings with comprehensive technical SEO audits, AI Generative Engine Optimization (GEO), semantic entity mapping, and editorial backlink building.
+                </p>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: #CBD5E1; margin-bottom: 1.5rem;">
+                  <li><i class="bi bi-check2-circle text-primary"></i> High-authority keyword clusters &amp; search intent modeling</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Core Web Vitals speed optimization for 95+ PageSpeed</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Safe, high-impact editorial PR backlinks &amp; EEAT signals</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-block">Get Free SEO Audit &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Service 2: Performance Marketing & PPC -->
+          <div class="service-card-enhanced" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="height: 200px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Performance Marketing &amp; Paid Ads" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; right: 14px; background: rgba(15, 23, 42, 0.85); color: #34D399; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;">High ROAS</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.35rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.75rem;">Paid Media &amp; Performance PPC</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Scale paid campaigns profitably across Google Search, Performance Max, Meta Ads (Instagram/Facebook), and LinkedIn Ads with proprietary ROAS models.
+                </p>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: #CBD5E1; margin-bottom: 1.5rem;">
+                  <li><i class="bi bi-check2-circle text-primary"></i> 4.8x average verified campaign return on ad spend (ROAS)</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Server-side tracking via Meta Conversions API (CAPI)</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Dynamic creative variation testing &amp; retargeting funnels</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-block">Scale Paid Ads &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Service 3: Social Media Marketing -->
+          <div class="service-card-enhanced" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="height: 200px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80" alt="Social Media Marketing &amp; Brand Growth" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; right: 14px; background: rgba(15, 23, 42, 0.85); color: #F472B6; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;">Viral Reach</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.35rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.75rem;">Social Media Marketing (SMM)</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Build loyal digital communities with viral short-form video creative (Reels &amp; Shorts), interactive carousels, and high-impact influencer marketing campaigns.
+                </p>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: #CBD5E1; margin-bottom: 1.5rem;">
+                  <li><i class="bi bi-check2-circle text-primary"></i> 3-second hook video production and storytelling</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Vetted niche influencer collaborations &amp; UGC creators</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Active community engagement &amp; brand reputation care</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-block">Grow Social Reach &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Service 4: Content Strategy & Copywriting -->
+          <div class="service-card-enhanced" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="height: 200px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=800&q=80" alt="Content Marketing Strategy &amp; Copywriting" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; right: 14px; background: rgba(15, 23, 42, 0.85); color: #FBBF24; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;">Authority Content</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.35rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.75rem;">Content Marketing &amp; Copywriting</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Convert passive visitors into loyal brand advocates through authoritative pillar blog content, persuasive landing page copy, and educational lead magnets.
+                </p>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: #CBD5E1; margin-bottom: 1.5rem;">
+                  <li><i class="bi bi-check2-circle text-primary"></i> In-depth research-backed whitepapers &amp; case studies</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Direct-response landing page copy that drives action</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Full content calendar management &amp; distribution</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-block">Order Content Strategy &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Service 5: CRO & Funnel Optimization -->
+          <div class="service-card-enhanced" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="height: 200px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=800&q=80" alt="Conversion Rate Optimization (CRO)" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; right: 14px; background: rgba(15, 23, 42, 0.85); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;">2x Conversions</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.35rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.75rem;">Conversion Rate Optimization (CRO)</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Unlock hidden revenue from existing traffic. We audit heatmaps, run A/B testing on pricing &amp; hero sections, and eliminate checkout friction points.
+                </p>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: #CBD5E1; margin-bottom: 1.5rem;">
+                  <li><i class="bi bi-check2-circle text-primary"></i> Behavioral heatmap, scroll depth &amp; drop-off analysis</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Multi-variant A/B headline &amp; CTA experiments</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Mobile checkout simplification &amp; 1-click forms</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-block">Boost Conversion Rates &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Service 6: Marketing Automation & Email -->
+          <div class="service-card-enhanced" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="height: 200px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Marketing Automation &amp; CRM" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; right: 14px; background: rgba(15, 23, 42, 0.85); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 9999px;">Automated Growth</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.35rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.75rem;">Marketing Automation &amp; Email</h3>
+                <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Build recurring revenue pipelines with automated nurture sequences, dynamic lead scoring, Klaviyo &amp; HubSpot CRM setups, and SMS/WhatsApp triggers.
+                </p>
+                <ul style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.85rem; color: #CBD5E1; margin-bottom: 1.5rem;">
+                  <li><i class="bi bi-check2-circle text-primary"></i> High-deliverability segmented email welcome flows</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Abandoned browse &amp; checkout recovery automation</li>
+                  <li><i class="bi bi-check2-circle text-primary"></i> Multi-channel CRM integration &amp; lead nurturing</li>
+                </ul>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-block">Automate Your Growth &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="services.html" class="btn btn-outline btn-lg">View All Services &amp; Fleet Specifications &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- ==========================================
+         NEW SECTION: 4-STAGE ROAS ACCELERATION ENGINE (#growth-engine)
+         ========================================== -->
+    <section class="section-padding bg-surface" id="growth-engine" style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-cpu-fill text-accent"></i> Proprietary Agency Methodology
+          </div>
+          <h2 class="section-title">The 4-Stage <span class="gradient-text">ROAS Acceleration Engine</span></h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            How we engineer predictable, scalable revenue growth for high-growth brands without burning capital on unverified ad experiments.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem;">
+          <!-- Stage 1 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform var(--transition-fast), border-color var(--transition-fast);">
+            <div style="height: 190px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Full-Funnel Attribution" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; left: 14px; background: var(--primary); color: #FFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;">STAGE 01</span>
+              <span style="position: absolute; bottom: 14px; right: 14px; background: rgba(0, 0, 0, 0.85); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">CAPI 9.4+ Quality</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #FFF; font-family: var(--font-heading); margin-bottom: 0.65rem;">Full-Funnel Attribution Audit</h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  We implement server-side Meta Conversions API (CAPI), Google Analytics 4 server GTM, and post-purchase attribution to eliminate 100% of tracking loss.
+                </p>
+              </div>
+              <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.8rem; color: #94A3B8;">Event Match Score</span>
+                <strong style="color: #FB7185; font-size: 0.95rem;">9.4 / 10</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 2 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform var(--transition-fast), border-color var(--transition-fast);">
+            <div style="height: 190px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=700&q=80" alt="High-Velocity Creative Lab" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; left: 14px; background: var(--primary); color: #FFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;">STAGE 02</span>
+              <span style="position: absolute; bottom: 14px; right: 14px; background: rgba(0, 0, 0, 0.85); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">16 Hooks / Sprint</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #FFF; font-family: var(--font-heading); margin-bottom: 0.65rem;">High-Velocity Creative Studio</h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Our creative team tests 16+ viral TikTok/Reels hooks, unboxing reels, and direct-response UGC angles weekly to eliminate creative fatigue and cut customer acquisition costs.
+                </p>
+              </div>
+              <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.8rem; color: #94A3B8;">Customer Acq Cost</span>
+                <strong style="color: #FB7185; font-size: 0.95rem;">-42% CAC Drop</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 3 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform var(--transition-fast), border-color var(--transition-fast);">
+            <div style="height: 190px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" alt="Algorithmic Media Buying" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; left: 14px; background: var(--primary); color: #FFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;">STAGE 03</span>
+              <span style="position: absolute; bottom: 14px; right: 14px; background: rgba(0, 0, 0, 0.85); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">4.82x ROAS</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #FFF; font-family: var(--font-heading); margin-bottom: 0.65rem;">Algorithmic Scaling Matrix</h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Deploy Advantage+ Catalog campaigns, Google Performance Max assets, and bidding caps with automated pacing that prevent ROAS decay during budget scaling.
+                </p>
+              </div>
+              <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.8rem; color: #94A3B8;">Target ROAS</span>
+                <strong style="color: #FB7185; font-size: 0.95rem;">4.82x Portfolio Lift</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform var(--transition-fast), border-color var(--transition-fast);">
+            <div style="height: 190px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=700&q=80" alt="Retention & CRO" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 14px; left: 14px; background: var(--primary); color: #FFF; font-size: 0.75rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;">STAGE 04</span>
+              <span style="position: absolute; bottom: 14px; right: 14px; background: rgba(0, 0, 0, 0.85); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 6px;">+38% LTV Lift</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.25rem; color: #FFF; font-family: var(--font-heading); margin-bottom: 0.65rem;">LTV Retention &amp; CRO Funnel</h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Turn first-time buyers into loyal repeat customers using Klaviyo lifecycle automation, VIP replenishment sequences, and frictionless 1-click mobile checkout funnels.
+                </p>
+              </div>
+              <div style="border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 0.8rem; color: #94A3B8;">Repeat Revenue</span>
+                <strong style="color: #FB7185; font-size: 0.95rem;">+38% 90-Day LTV</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         POPULAR PACKAGES SECTION (3D FLIP CARDS)
+         ========================================== -->
+    <section class="section-padding" id="popular-packages">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-rocket-takeoff-fill text-accent"></i> Proven ROI Plans
+          </div>
+          <h2 class="section-title">Growth &amp; Performance <span>Marketing Packages</span></h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            Hover or tap any package card to experience the interactive 3D flip effect and preview campaign deliverables, milestones, and deliverables!
+          </p>
+
+          <!-- Category Filter Buttons -->
+          <div class="search-tabs" style="justify-content: center; display: inline-flex; margin-top: 1.75rem;">
+            <button class="search-tab-btn package-filter-btn active" data-filter="all">All Plans</button>
+            <button class="search-tab-btn package-filter-btn" data-filter="seo">SEO &amp; Organic</button>
+            <button class="search-tab-btn package-filter-btn" data-filter="ads">Performance Ads</button>
+            <button class="search-tab-btn package-filter-btn" data-filter="social">Social &amp; Brand</button>
+            <button class="search-tab-btn package-filter-btn" data-filter="enterprise">Full Funnel</button>
+          </div>
+        </div>
+
+        <!-- 3D Flip Cards Grid -->
+        <div class="row g-4" id="packagesGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px;">
+          
+          <!-- Package Card 1: SEO Domination Growth Plan -->
+          <div class="package-card-item" data-category="seo">
+            <div class="flip-card-wrapper">
+              <div class="flip-card">
+                <!-- FRONT FACE -->
+                <div class="flip-card-front">
+                  <div class="flip-card-img">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="SEO &amp; Digital Analytics Growth">
+                    <span class="flip-badge"><i class="bi bi-search"></i> Organic First</span>
+                    <span class="flip-price-tag">₹24,999 / mo</span>
+                  </div>
+                  <div class="flip-card-body">
+                    <div>
+                      <h3 class="flip-card-title">SEO Organic Domination</h3>
+                      <div class="flip-card-meta">
+                        <span><i class="bi bi-clock"></i> 3-Month Sprint</span>
+                        <span><i class="bi bi-star-fill text-warning"></i> 4.9 (140+ reviews)</span>
+                      </div>
+                      <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
+                        Capture high-intent organic search buyers. Comprehensive technical audit, 40+ target keywords, GEO optimization, and authoritative backlink building.
+                      </p>
+                    </div>
+                    <div class="flip-hint">
+                      <span><i class="bi bi-arrow-repeat"></i> Hover or Tap to Flip Card</span>
+                      <button class="btn btn-outline btn-sm trigger-flip">Deliverables &rarr;</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK FACE -->
+                <div class="flip-card-back">
+                  <div>
+                    <div class="flip-back-header">
+                      <h4>SEO Campaign Scope</h4>
+                      <p>Dedicated Technical SEO Lead Assigned</p>
+                    </div>
+                    <div class="flip-highlights">
+                      <h5>Monthly Inclusions</h5>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> Complete technical audit &amp; Core Web Vitals fix</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 40 high-intent transactional keyword rankings</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 4 Pillar blog articles (2,000+ words each)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 8 High-DA editorial contextual backlinks</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Bi-weekly live rankings &amp; revenue attribution calls</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flip-back-actions">
+                    <a href="get-started.html" class="btn btn-primary" style="flex: 1; text-align: center;">Choose Plan</a>
+                    <button class="btn btn-outline btn-sm trigger-flip" style="color:#fff; border-color:rgba(255,255,255,0.4)">Flip Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Card 2: Performance PPC & Meta Ads Scaler -->
+          <div class="package-card-item" data-category="ads">
+            <div class="flip-card-wrapper">
+              <div class="flip-card">
+                <!-- FRONT FACE -->
+                <div class="flip-card-front">
+                  <div class="flip-card-img">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="PPC Performance &amp; Paid Search Campaigns">
+                    <span class="flip-badge"><i class="bi bi-graph-up-arrow"></i> 4.8x ROAS Avg</span>
+                    <span class="flip-price-tag">₹34,999 / mo</span>
+                  </div>
+                  <div class="flip-card-body">
+                    <div>
+                      <h3 class="flip-card-title">Performance PPC &amp; Meta Ads</h3>
+                      <div class="flip-card-meta">
+                        <span><i class="bi bi-clock"></i> Ongoing Monthly</span>
+                        <span><i class="bi bi-star-fill text-warning"></i> 4.95 (210+ reviews)</span>
+                      </div>
+                      <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
+                        Scale paid advertising profitably across Google Ads (Search &amp; PMax) and Meta (Instagram &amp; Facebook) with server-side CAPI tracking and creative testing.
+                      </p>
+                    </div>
+                    <div class="flip-hint">
+                      <span><i class="bi bi-arrow-repeat"></i> Hover or Tap to Flip Card</span>
+                      <button class="btn btn-outline btn-sm trigger-flip">Deliverables &rarr;</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK FACE -->
+                <div class="flip-card-back">
+                  <div>
+                    <div class="flip-back-header">
+                      <h4>PPC Deliverables</h4>
+                      <p>Full Campaign Management &amp; Creative Lab</p>
+                    </div>
+                    <div class="flip-highlights">
+                      <h5>Monthly Inclusions</h5>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> Google Search, Display &amp; Performance Max ads</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Meta Ads (Instagram Reels, Feed &amp; Carousels)</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 12 High-converting video/image ad creatives</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Meta Conversions API &amp; GA4 event telemetry</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Weekly budget optimization &amp; target ROAS scaling</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flip-back-actions">
+                    <a href="get-started.html" class="btn btn-primary" style="flex: 1; text-align: center;">Choose Plan</a>
+                    <button class="btn btn-outline btn-sm trigger-flip" style="color:#fff; border-color:rgba(255,255,255,0.4)">Flip Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Card 3: Viral Social & Influencer Engine -->
+          <div class="package-card-item" data-category="social">
+            <div class="flip-card-wrapper">
+              <div class="flip-card">
+                <!-- FRONT FACE -->
+                <div class="flip-card-front">
+                  <div class="flip-card-img">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Social Media Marketing &amp; Influencer Advertising">
+                    <span class="flip-badge"><i class="bi bi-instagram"></i> 100K+ Reach</span>
+                    <span class="flip-price-tag">₹29,999 / mo</span>
+                  </div>
+                  <div class="flip-card-body">
+                    <div>
+                      <h3 class="flip-card-title">Viral Social &amp; Influencer</h3>
+                      <div class="flip-card-meta">
+                        <span><i class="bi bi-clock"></i> Monthly Retainer</span>
+                        <span><i class="bi bi-star-fill text-warning"></i> 4.88 (95+ reviews)</span>
+                      </div>
+                      <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
+                        Ignite brand hype across Instagram, LinkedIn, and YouTube. Includes viral short-form video production, UGC creator campaigns, and active community care.
+                      </p>
+                    </div>
+                    <div class="flip-hint">
+                      <span><i class="bi bi-arrow-repeat"></i> Hover or Tap to Flip Card</span>
+                      <button class="btn btn-outline btn-sm trigger-flip">Deliverables &rarr;</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK FACE -->
+                <div class="flip-card-back">
+                  <div>
+                    <div class="flip-back-header">
+                      <h4>Social Strategy Inclusions</h4>
+                      <p>Creative Production &amp; Creator Management</p>
+                    </div>
+                    <div class="flip-highlights">
+                      <h5>Monthly Inclusions</h5>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> 16 Custom Reels / Shorts with trending audio hooks</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 12 Educational carousels and static graphics</li>
+                        <li><i class="bi bi-check-circle-fill"></i> 3 Niche micro-influencer product collaborations</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Daily comments moderation &amp; DM lead triage</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Brand sentiment and virality growth analysis</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flip-back-actions">
+                    <a href="get-started.html" class="btn btn-primary" style="flex: 1; text-align: center;">Choose Plan</a>
+                    <button class="btn btn-outline btn-sm trigger-flip" style="color:#fff; border-color:rgba(255,255,255,0.4)">Flip Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Card 4: E-Commerce & CRO Scale Engine -->
+          <div class="package-card-item" data-category="ads" data-secondary="enterprise">
+            <div class="flip-card-wrapper">
+              <div class="flip-card">
+                <!-- FRONT FACE -->
+                <div class="flip-card-front">
+                  <div class="flip-card-img">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="E-Commerce CRO &amp; Revenue Engine">
+                    <span class="flip-badge"><i class="bi bi-cart-check-fill"></i> 2.4x Conversion</span>
+                    <span class="flip-price-tag">₹45,000 / mo</span>
+                  </div>
+                  <div class="flip-card-body">
+                    <div>
+                      <h3 class="flip-card-title">E-Commerce Revenue Engine</h3>
+                      <div class="flip-card-meta">
+                        <span><i class="bi bi-clock"></i> 6-Month Scale</span>
+                        <span><i class="bi bi-star-fill text-warning"></i> 4.93 (180+ reviews)</span>
+                      </div>
+                      <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
+                        Engineered for Shopify, WooCommerce, and D2C brands. Complete landing page CRO, Klaviyo email retention flows, and Meta catalog ads scaling.
+                      </p>
+                    </div>
+                    <div class="flip-hint">
+                      <span><i class="bi bi-arrow-repeat"></i> Hover or Tap to Flip Card</span>
+                      <button class="btn btn-outline btn-sm trigger-flip">Deliverables &rarr;</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK FACE -->
+                <div class="flip-card-back">
+                  <div>
+                    <div class="flip-back-header">
+                      <h4>E-Commerce Deliverables</h4>
+                      <p>D2C Sales &amp; Lifetime Value Architecture</p>
+                    </div>
+                    <div class="flip-highlights">
+                      <h5>Monthly Inclusions</h5>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> Heatmap audit &amp; bi-weekly A/B checkout tests</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Klaviyo 6-tier lifecycle automation flows</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Dynamic Advantage+ catalog ads scaling</li>
+                        <li><i class="bi bi-check-circle-fill"></i> WhatsApp abandoned cart recover automation</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Average Order Value (AOV) bundle optimizations</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flip-back-actions">
+                    <a href="get-started.html" class="btn btn-primary" style="flex: 1; text-align: center;">Choose Plan</a>
+                    <button class="btn btn-outline btn-sm trigger-flip" style="color:#fff; border-color:rgba(255,255,255,0.4)">Flip Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Card 5: B2B Lead Generation & LinkedIn Growth -->
+          <div class="package-card-item" data-category="enterprise">
+            <div class="flip-card-wrapper">
+              <div class="flip-card">
+                <!-- FRONT FACE -->
+                <div class="flip-card-front">
+                  <div class="flip-card-img">
+                    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80" alt="B2B Lead Generation Strategy">
+                    <span class="flip-badge"><i class="bi bi-briefcase-fill"></i> High-Ticket B2B</span>
+                    <span class="flip-price-tag">₹49,999 / mo</span>
+                  </div>
+                  <div class="flip-card-body">
+                    <div>
+                      <h3 class="flip-card-title">B2B Lead Generation</h3>
+                      <div class="flip-card-meta">
+                        <span><i class="bi bi-clock"></i> Monthly Retainer</span>
+                        <span><i class="bi bi-star-fill text-warning"></i> 4.91 (120+ reviews)</span>
+                      </div>
+                      <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
+                        Fill your sales pipeline with qualified decision-makers via hyper-targeted LinkedIn Sponsored InMail, Google Search intent, and executive personal branding.
+                      </p>
+                    </div>
+                    <div class="flip-hint">
+                      <span><i class="bi bi-arrow-repeat"></i> Hover or Tap to Flip Card</span>
+                      <button class="btn btn-outline btn-sm trigger-flip">Deliverables &rarr;</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK FACE -->
+                <div class="flip-card-back">
+                  <div>
+                    <div class="flip-back-header">
+                      <h4>B2B Pipeline Deliverables</h4>
+                      <p>Account-Based Marketing (ABM) Framework</p>
+                    </div>
+                    <div class="flip-highlights">
+                      <h5>Monthly Inclusions</h5>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> Targeted LinkedIn Matched Audience ad campaigns</li>
+                        <li><i class="bi bi-check-circle-fill"></i> High-converting B2B whitepaper lead magnets</li>
+                        <li><i class="bi bi-check-circle-fill"></i> HubSpot / CRM lead scoring &amp; automated alerts</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Founder &amp; C-Suite LinkedIn thought leadership</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Dedicated SDR booking calendar sync</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flip-back-actions">
+                    <a href="get-started.html" class="btn btn-primary" style="flex: 1; text-align: center;">Choose Plan</a>
+                    <button class="btn btn-outline btn-sm trigger-flip" style="color:#fff; border-color:rgba(255,255,255,0.4)">Flip Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package Card 6: Enterprise Full-Funnel Omnichannel -->
+          <div class="package-card-item" data-category="enterprise">
+            <div class="flip-card-wrapper">
+              <div class="flip-card">
+                <!-- FRONT FACE -->
+                <div class="flip-card-front">
+                  <div class="flip-card-img">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Enterprise Full-Funnel Marketing Strategy">
+                    <span class="flip-badge"><i class="bi bi-award-fill"></i> Full Funnel</span>
+                    <span class="flip-price-tag">₹89,999 / mo</span>
+                  </div>
+                  <div class="flip-card-body">
+                    <div>
+                      <h3 class="flip-card-title">Enterprise Omnichannel</h3>
+                      <div class="flip-card-meta">
+                        <span><i class="bi bi-clock"></i> Dedicated Squad</span>
+                        <span><i class="bi bi-star-fill text-warning"></i> 4.98 (75+ reviews)</span>
+                      </div>
+                      <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
+                        Your entire external digital marketing team. Complete SEO, multi-channel performance ads, video creative studio, CRO, and marketing automation under one roof.
+                      </p>
+                    </div>
+                    <div class="flip-hint">
+                      <span><i class="bi bi-arrow-repeat"></i> Hover or Tap to Flip Card</span>
+                      <button class="btn btn-outline btn-sm trigger-flip">Deliverables &rarr;</button>
+                    </div>
+                  </div>
+                </div>
+                <!-- BACK FACE -->
+                <div class="flip-card-back">
+                  <div>
+                    <div class="flip-back-header">
+                      <h4>Enterprise Squad Model</h4>
+                      <p>Dedicated Account Director &amp; Specialists</p>
+                    </div>
+                    <div class="flip-highlights">
+                      <h5>Monthly Inclusions</h5>
+                      <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> Dedicated Squad: SEO, PPC, Copy, Design &amp; Dev</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Full multi-platform ad spend management</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Custom Looker Studio 24/7 live ROI dashboard</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Unlimited video creatives &amp; landing page A/B tests</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Priority SLA with 24/7 Slack/WhatsApp channel</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="flip-back-actions">
+                    <a href="get-started.html" class="btn btn-primary" style="flex: 1; text-align: center;">Choose Plan</a>
+                    <button class="btn btn-outline btn-sm trigger-flip" style="color:#fff; border-color:rgba(255,255,255,0.4)">Flip Back</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CASE STUDIES & REVENUE GROWTH OUTCOMES
+         ========================================== -->
+    <section class="section-padding" id="case-studies" style="background: linear-gradient(180deg, #000000 0%, #0D0509 50%, #000000 100%); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="text-center" style="max-width: 820px; margin: 0 auto 3.5rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-graph-up-arrow text-accent"></i> Verified Client Outcomes
+          </div>
+          <h2 class="section-title">Real Brands. Real Revenue. <span class="gradient-text">Proven Growth Case Studies</span></h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            See how our integrated performance media, technical SEO, and conversion optimization engines transformed client balance sheets.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.25rem; margin-bottom: 3.5rem;">
+          
+          <!-- Case Study 1: D2C Fashion -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 220px; position: relative; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="UrbanStyle D2C Apparel Scaling" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 12px; left: 12px; background: rgba(15, 23, 42, 0.85); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px;">D2C E-Commerce</span>
+              <span style="position: absolute; bottom: 12px; right: 12px; background: linear-gradient(135deg, #10B981, #F43F5E); color: #FFF; font-size: 0.85rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;">5.2x Blended ROAS</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.3rem; color: #FFF; margin-bottom: 0.5rem; font-family: var(--font-heading);">UrbanStyle: Scaling From ₹3L to ₹18L Monthly GMV</h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Rebuilt catalog ad sets with Advantage+ Shopping, implemented server-side Meta Conversions API (CAPI), and engineered dynamic UGC creator video hooks that reduced CAC by 42%.
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; background: rgba(11, 15, 25, 0.6); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem;">
+                  <div>
+                    <span style="color: var(--text-dim); font-size: 0.75rem; display: block;">Monthly Ad Spend</span>
+                    <strong style="color: #FFF; font-size: 1.05rem;">₹3.5L / mo</strong>
+                  </div>
+                  <div>
+                    <span style="color: var(--text-dim); font-size: 0.75rem; display: block;">Net Revenue Lift</span>
+                    <strong style="color: #10B981; font-size: 1.05rem;">+510% GMV</strong>
+                  </div>
+                </div>
+              </div>
+              <a href="packages.html" class="btn btn-outline btn-sm">Explore Strategy &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Case Study 2: B2B SaaS -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 220px; position: relative; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="NovaCloud Enterprise B2B SaaS Lead Gen" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 12px; left: 12px; background: rgba(15, 23, 42, 0.85); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px;">B2B Software &amp; Tech</span>
+              <span style="position: absolute; bottom: 12px; right: 12px; background: linear-gradient(135deg, #E11D48, #FB7185); color: #FFF; font-size: 0.85rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;">-58% Lower CAC</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.3rem; color: #FFF; margin-bottom: 0.5rem; font-family: var(--font-heading);">NovaCloud: 420+ Sales-Qualified Enterprise Leads</h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Executed full-funnel LinkedIn InMail campaigns targeting VP &amp; C-Suite decision makers, backed by technical thought leadership SEO that captured high-value enterprise pipeline.
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; background: rgba(11, 15, 25, 0.6); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem;">
+                  <div>
+                    <span style="color: var(--text-dim); font-size: 0.75rem; display: block;">Sales Pipeline</span>
+                    <strong style="color: #FFF; font-size: 1.05rem;">₹4.2Cr Pipeline</strong>
+                  </div>
+                  <div>
+                    <span style="color: var(--text-dim); font-size: 0.75rem; display: block;">Cost per Lead (CPL)</span>
+                    <strong style="color: #FB7185; font-size: 1.05rem;">₹680 (from ₹1,620)</strong>
+                  </div>
+                </div>
+              </div>
+              <a href="packages.html" class="btn btn-outline btn-sm">Explore Strategy &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Case Study 3: Healthcare Clinics -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 220px; position: relative; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Apex Medical Clinics Local Patient Growth" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 12px; left: 12px; background: rgba(15, 23, 42, 0.85); color: #F59E0B; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px;">Multi-Location Clinic</span>
+              <span style="position: absolute; bottom: 12px; right: 12px; background: linear-gradient(135deg, #F59E0B, #10B981); color: #FFF; font-size: 0.85rem; font-weight: 800; padding: 4px 12px; border-radius: 9999px;">12x Inbound Bookings</span>
+            </div>
+            <div style="padding: 1.75rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-size: 1.3rem; color: #FFF; margin-bottom: 0.5rem; font-family: var(--font-heading);">Apex Health: 1,800+ Monthly Inbound Patient Visits</h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Dominated Google Local 3-Pack across Salem and Coimbatore with hyper-local SEO, coupled with intent-driven Google Search call-only campaigns with 99.4% conversion tracking.
+                </p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; background: rgba(11, 15, 25, 0.6); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.25rem;">
+                  <div>
+                    <span style="color: var(--text-dim); font-size: 0.75rem; display: block;">Local Google Rank</span>
+                    <strong style="color: #FFF; font-size: 1.05rem;">#1 for 26 Keywords</strong>
+                  </div>
+                  <div>
+                    <span style="color: var(--text-dim); font-size: 0.75rem; display: block;">Patient Revenue Lift</span>
+                    <strong style="color: #10B981; font-size: 1.05rem;">₹1.2Cr Pipeline</strong>
+                  </div>
+                </div>
+              </div>
+              <a href="packages.html" class="btn btn-outline btn-sm">Explore Strategy &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         THE 4-STAGE AGILE SPRINT FRAMEWORK
+         ========================================== -->
+    <section class="section-padding bg-alt">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center;">
+          <div>
+            <div class="pill-badge" style="margin-bottom: 1.25rem;">
+              <i class="bi bi-gear-wide-connected text-accent"></i> Agency Methodology
+            </div>
+            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">
+              The 4-Stage Sprint Framework Built for <span class="gradient-text">Predictable Growth</span>
+            </h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
+              We eliminate guesswork with agile 30-day marketing sprints. Every cycle is mapped to tangible revenue metrics, transparent telemetry, and rapid creative iteration.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(251, 113, 133, 0.15); color: #FB7185; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">01</div>
+                <div>
+                  <h4 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.25rem;">Deep Telemetry &amp; Pixel Audit (Days 1–7)</h4>
+                  <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                    We calibrate server-side Meta CAPI, GA4, and offline CRM conversion events to ensure 100% clean attribution before spending ad dollars.
+                  </p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(99, 102, 241, 0.15); color: #FB7185; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">02</div>
+                <div>
+                  <h4 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.25rem;">Creative Angle Testing Lab (Days 8–18)</h4>
+                  <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                    We deploy 16+ creative hooks (UGC video, statics, motion design) across micro-budgets to identify algorithmic winners.
+                  </p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(16, 185, 129, 0.15); color: #10B981; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">03</div>
+                <div>
+                  <h4 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.25rem;">Algorithmic Scaling &amp; Bid Optimization (Days 19–25)</h4>
+                  <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                    Winning creatives receive scaled budget allocations with horizontal lookalike testing and automated bid ceiling guardrails.
+                  </p>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 1.25rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(245, 158, 11, 0.15); color: #F59E0B; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0;">04</div>
+                <div>
+                  <h4 style="color: #FFF; font-size: 1.15rem; margin-bottom: 0.25rem;">Retention &amp; Lifetime Value Maximization (Days 26–30)</h4>
+                  <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                    Automated email/SMS drips, post-purchase cross-sells, and SEO organic moats ensure compounding monthly customer retention.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="position: relative;">
+            <div style="border-radius: var(--radius-xl); overflow: hidden; border: 1px solid var(--border-glow); box-shadow: var(--shadow-glow);">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Stackly Performance Sprint Team" style="width: 100%; height: 500px; object-fit: cover; display: block;">
+            </div>
+            <div style="position: absolute; bottom: -20px; left: -20px; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); border: 1px solid var(--border-glow); border-radius: var(--radius-md); padding: 1.25rem 1.75rem; box-shadow: var(--shadow-xl);">
+              <span style="color: var(--accent-cyan); font-size: 1.5rem; font-weight: 800; display: block;">30-Day</span>
+              <span style="color: #FFF; font-size: 0.85rem; font-weight: 600;">Milestone Performance Sprints</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         INDUSTRY VERTICALS WE SPECIALIZE IN
+         ========================================== -->
+    <section class="section-padding" style="background: #050811;">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-briefcase-fill text-accent"></i> Specialized Industry Knowledge
+          </div>
+          <h2 class="section-title">Engineered for High-Growth <span class="gradient-text">Industry Verticals</span></h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            Every market requires distinct funnel mechanics. We bring battle-tested playbooks to four core sectors.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.75rem;">
+          <!-- Vertical 1 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 180px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&w=600&q=80" alt="D2C Consumer Brands &amp; E-Commerce" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 1.5rem; flex: 1;">
+              <h3 style="color: #FFF; font-size: 1.2rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">D2C E-Commerce</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5;">
+                Advantage+ Shopping campaigns, TikTok/Reels UGC, and Klaviyo revenue automation for brands scaling to ₹50L+ GMV.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vertical 2 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 180px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80" alt="B2B Tech &amp; SaaS Funnels" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 1.5rem; flex: 1;">
+              <h3 style="color: #FFF; font-size: 1.2rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">B2B SaaS &amp; Tech</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5;">
+                Account-Based Marketing (ABM) on LinkedIn, semantic technical SEO, and whitepaper lead funnels designed for 6-figure ACV.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vertical 3 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 180px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80" alt="Real Estate &amp; High-Ticket Luxury" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 1.5rem; flex: 1;">
+              <h3 style="color: #FFF; font-size: 1.2rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">Real Estate &amp; Luxury</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5;">
+                Hyper-targeted Meta video walkthroughs, geo-fenced Google Search ads, and instant WhatsApp booking bots for ₹50L+ assets.
+              </p>
+            </div>
+          </div>
+
+          <!-- Vertical 4 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 180px; overflow: hidden;">
+              <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" alt="Healthcare, Dental &amp; Multi-Clinic" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="padding: 1.5rem; flex: 1;">
+              <h3 style="color: #FFF; font-size: 1.2rem; margin-bottom: 0.5rem; font-family: var(--font-heading);">Healthcare &amp; Clinics</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5;">
+                Google Local Map 3-Pack rankings, emergency search ads, and HIPAA/NABH compliant patient acquisition funnels.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         BLOG SECTION (DIGITAL MARKETING INSIGHTS)
+         ========================================== -->
+    <section class="section-padding" id="blog">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-journal-text text-accent"></i> Marketing Insights &amp; Growth Trends
+          </div>
+          <h2 class="section-title">Latest Digital Marketing <span>Blog &amp; Insights</span></h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            Actionable SEO frameworks, high-ROI paid ad strategies, conversion optimization breakdowns, and proven growth blueprints.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          <!-- Article 1: SEO -->
+          <article style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 200px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Mastering AI-Driven SEO & Voice Search in 2026" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 12px; left: 12px; background: rgba(15, 23, 42, 0.85); color: var(--accent-cyan); font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px;">SEO &amp; Organic Growth</span>
+            </div>
+            <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-dim); display: block; margin-bottom: 0.5rem;"><i class="bi bi-clock"></i> 5 min read &bull; Search Engine Optimization</span>
+                <h3 style="font-size: 1.25rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.75rem; line-height: 1.35;">
+                  Mastering AI Search &amp; Google SGE in 2026: The New SEO Blueprint
+                </h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  How to optimize for Generative Engine Optimization (GEO), secure high-authority EEAT backlinks, and capture high-intent zero-click organic search traffic.
+                </p>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm" style="align-self: flex-start;">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 2: Performance Marketing -->
+          <article style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 200px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Scaling ROAS on Meta and Google Ads" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 12px; left: 12px; background: rgba(15, 23, 42, 0.85); color: #34D399; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px;">Paid Media &amp; PPC</span>
+            </div>
+            <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-dim); display: block; margin-bottom: 0.5rem;"><i class="bi bi-clock"></i> 6 min read &bull; Performance Marketing</span>
+                <h3 style="font-size: 1.25rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.75rem; line-height: 1.35;">
+                  Scaling ROAS to 4.8x on Meta &amp; Google Ads with First-Party Tracking
+                </h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  Combat ad fatigue and rising CPCs: learn our exact multi-channel retargeting funnel, Conversions API (CAPI) setup, and dynamic creative testing system.
+                </p>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm" style="align-self: flex-start;">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Article 3: CRO & Funnels -->
+          <article style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column;">
+            <div style="height: 200px; overflow: hidden; position: relative;">
+              <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80" alt="Landing Page Conversion Optimization" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 12px; left: 12px; background: rgba(15, 23, 42, 0.85); color: #FBBF24; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 9999px;">Conversion Optimization</span>
+            </div>
+            <div style="padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span style="font-size: 0.8rem; color: var(--text-dim); display: block; margin-bottom: 0.5rem;"><i class="bi bi-clock"></i> 4 min read &bull; CRO &amp; UX Strategy</span>
+                <h3 style="font-size: 1.25rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.75rem; line-height: 1.35;">
+                  10 Landing Page Tweaks That Double Inbound Client Conversion Rates
+                </h3>
+                <p style="color: var(--text-muted); font-size: 0.875rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                  From high-contrast CTA microcopy to mobile-first speed benchmarks and interactive lead forms, discover tested UX triggers that turn clicks into customers.
+                </p>
+              </div>
+              <a href="#contact" class="btn btn-outline btn-sm" style="align-self: flex-start;">Read Article &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         REVIEWS & TESTIMONIALS SECTION
+         ========================================== -->
+    <section class="section-padding bg-alt" id="testimonials">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-chat-heart-fill text-accent"></i> Client Testimonials
+          </div>
+          <h2 class="section-title">What Founders &amp; CMOs Say About Stackly</h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            Real revenue outcomes and performance benchmarks achieved by businesses that partnered with our digital marketing agency.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          <!-- Review 1 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="color: #F59E0B; font-size: 1.1rem; margin-bottom: 1rem;">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="color: #E2E8F0; font-size: 1rem; line-height: 1.65; margin-bottom: 1.5rem;">
+                "Stackly completely restructured our Meta and Google Ads funnels. Within 90 days, our blended customer acquisition cost (CAC) dropped by 42% while our monthly revenue tripled from ₹12L to ₹41L. Their CAPI tracking setup is flawless."
+              </p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent-cyan)); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFF;">RK</div>
+              <div>
+                <strong style="display: block; color: #FFFFFF; font-size: 0.95rem;">Ramesh Kumar</strong>
+                <span style="font-size: 0.8rem; color: var(--text-dim);">Co-Founder &bull; UrbanStyle D2C Apparel</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="color: #F59E0B; font-size: 1.1rem; margin-bottom: 1rem;">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="color: #E2E8F0; font-size: 1rem; line-height: 1.65; margin-bottom: 1.5rem;">
+                "Our B2B SaaS startup needed high-intent enterprise pipeline. Stackly's technical SEO and LinkedIn Account-Based Marketing strategy generated 48 qualified enterprise demo bookings in Q2 alone. They are true strategic partners."
+              </p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #10B981, #F43F5E); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFF;">DP</div>
+              <div>
+                <strong style="display: block; color: #FFFFFF; font-size: 0.95rem;">Deepika Prasanth</strong>
+                <span style="font-size: 0.8rem; color: var(--text-dim);">VP of Growth &bull; CloudMatrix Technologies</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="color: #F59E0B; font-size: 1.1rem; margin-bottom: 1rem;">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              </div>
+              <p style="color: #E2E8F0; font-size: 1rem; line-height: 1.65; margin-bottom: 1.5rem;">
+                "From zero organic visibility to ranking #1 for 38 high-ticket service keywords. Their Generative Engine Optimization (GEO) foresight positioned us ahead of the AI search curve. Our inbound inquiries have never been stronger."
+              </p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border-subtle); padding-top: 1.25rem;">
+              <div style="width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, #FB7185, #C084FC); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #FFF;">VS</div>
+              <div>
+                <strong style="display: block; color: #FFFFFF; font-size: 0.95rem;">Vignesh Sundaram</strong>
+                <span style="font-size: 0.8rem; color: var(--text-dim);">Managing Director &bull; Apex Logistics Group</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         DIGITAL MARKETING FAQ ACCORDION SECTION
+         ========================================== -->
+    <section class="section-padding" id="faq">
+      <div class="container">
+        <div class="text-center" style="max-width: 780px; margin: 0 auto 3.5rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-question-circle-fill text-accent"></i> Clear Answers
+          </div>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            Everything you need to know about our digital marketing retainer models, reporting, ad spend management, and performance guarantees.
+          </p>
+        </div>
+
+        <div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+          <!-- FAQ 1 -->
+          <div class="accordion-item" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;">
+            <button class="accordion-header" style="width: 100%; padding: 1.25rem 1.5rem; background: transparent; border: none; color: #FFF; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span>How quickly can we expect measurable ROI on paid ads?</span>
+              <i class="bi bi-chevron-down" style="color: var(--accent-cyan); transition: transform 0.3s ease;"></i>
+            </button>
+            <div class="accordion-content" style="padding: 0 1.5rem 1.25rem 1.5rem; color: var(--text-muted); font-size: 0.925rem; line-height: 1.6;">
+              Paid campaigns typically achieve algorithmic stabilization within 7 to 14 days of launch. Through our rapid creative testing framework and first-party pixel calibration, most clients see profitable ROAS increases within the first 30 days.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;">
+            <button class="accordion-header" style="width: 100%; padding: 1.25rem 1.5rem; background: transparent; border: none; color: #FFF; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span>How is our advertising budget billed and managed?</span>
+              <i class="bi bi-chevron-down" style="color: var(--accent-cyan); transition: transform 0.3s ease;"></i>
+            </button>
+            <div class="accordion-content" style="padding: 0 1.5rem 1.25rem 1.5rem; color: var(--text-muted); font-size: 0.925rem; line-height: 1.6;">
+              You always maintain 100% direct ownership of your ad accounts (Google Ads, Meta Business Manager, LinkedIn Campaign Manager). Ad spend is paid directly by your business to the advertising platforms, while our agency fee is a transparent flat monthly retainer.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;">
+            <button class="accordion-header" style="width: 100%; padding: 1.25rem 1.5rem; background: transparent; border: none; color: #FFF; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span>What makes your SEO approach different in the era of AI search?</span>
+              <i class="bi bi-chevron-down" style="color: var(--accent-cyan); transition: transform 0.3s ease;"></i>
+            </button>
+            <div class="accordion-content" style="padding: 0 1.5rem 1.25rem 1.5rem; color: var(--text-muted); font-size: 0.925rem; line-height: 1.6;">
+              We optimize not just for traditional search ranking keywords, but also for Generative Engine Optimization (GEO)—ensuring your brand is cited and recommended by AI models including ChatGPT, Gemini, and Google AI Overviews.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;">
+            <button class="accordion-header" style="width: 100%; padding: 1.25rem 1.5rem; background: transparent; border: none; color: #FFF; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span>Do you require long-term lock-in contracts?</span>
+              <i class="bi bi-chevron-down" style="color: var(--accent-cyan); transition: transform 0.3s ease;"></i>
+            </button>
+            <div class="accordion-content" style="padding: 0 1.5rem 1.25rem 1.5rem; color: var(--text-muted); font-size: 0.925rem; line-height: 1.6;">
+              No. We believe client retention should be earned through consistent revenue results. After an initial 90-day foundation sprint, all our growth packages operate on a rolling month-to-month agreement with a simple 30-day notice period.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); overflow: hidden;">
+            <button class="accordion-header" style="width: 100%; padding: 1.25rem 1.5rem; background: transparent; border: none; color: #FFF; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              <span>How often do we receive campaign performance reports?</span>
+              <i class="bi bi-chevron-down" style="color: var(--accent-cyan); transition: transform 0.3s ease;"></i>
+            </button>
+            <div class="accordion-content" style="padding: 0 1.5rem 1.25rem 1.5rem; color: var(--text-muted); font-size: 0.925rem; line-height: 1.6;">
+              You receive a live 24/7 Looker Studio dashboard tracking real-time ROAS, CAC, conversions, and organic keywords. In addition, we conduct bi-weekly strategy calls and deliver comprehensive monthly executive summaries.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT & STRATEGY CONSULTATION SECTION
+         ========================================== -->
+    <section class="section-padding" id="contact">
+      <div class="container">
+        <div class="text-center" style="max-width: 800px; margin: 0 auto 3.5rem auto;">
+          <div class="pill-badge" style="margin: 0 auto 1rem auto;">
+            <i class="bi bi-headset text-accent"></i> Free Growth Strategy Session
+          </div>
+          <h2 class="section-title">Ready to Scale Your Brand with <span>Stackly</span>?</h2>
+          <p class="section-subtitle-text" style="color: var(--text-muted); font-size: 1.1rem;">
+            Schedule a complimentary 30-minute growth audit with our senior performance marketing directors. We analyze your website, ad accounts, and conversion bottlenecks.
+          </p>
+        </div>
+
+        <div class="contact-container-grid" style="display: grid; grid-template-columns: 1fr 1.25fr; gap: 3.5rem; align-items: start;">
+          <!-- Left: Agency Details Card -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2.5rem;">
+            <span class="badge badge-subtle" style="margin-bottom: 1.25rem;">Agency Headquarters</span>
+            <h3 style="font-size: 1.75rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 1.25rem;">Stackly Growth Agency</h3>
+            <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 2rem;">
+              Partner with certified Google &amp; Meta marketing strategists dedicated to driving measurable bottom-line revenue.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <!-- Detail 1: Address -->
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(6, 182, 212, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); font-size: 1.25rem; flex-shrink: 0;">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div>
+                  <strong style="display: block; color: #FFFFFF; font-size: 1rem; margin-bottom: 2px;">Office Address</strong>
+                  <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                    Stackly Digital Marketing Agency HQ,<br>
+                    Five Roads Commercial Hub,<br>
+                    Salem, Tamil Nadu - 636004, India
+                  </p>
+                </div>
+              </div>
+
+              <!-- Detail 2: Phone -->
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(16, 185, 129, 0.15); display: flex; align-items: center; justify-content: center; color: #10B981; font-size: 1.25rem; flex-shrink: 0;">
+                  <i class="bi bi-telephone-fill"></i>
+                </div>
+                <div>
+                  <strong style="display: block; color: #FFFFFF; font-size: 1rem; margin-bottom: 2px;">Phone &amp; WhatsApp</strong>
+                  <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                    Agency Line: +91 427 8900 111<br>
+                    WhatsApp: +91 98427 55432 (Instant Strategy Desk)
+                  </p>
+                </div>
+              </div>
+
+              <!-- Detail 3: Email -->
+              <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(99, 102, 241, 0.15); display: flex; align-items: center; justify-content: center; color: #FB7185; font-size: 1.25rem; flex-shrink: 0;">
+                  <i class="bi bi-envelope-fill"></i>
+                </div>
+                <div>
+                  <strong style="display: block; color: #FFFFFF; font-size: 1rem; margin-bottom: 2px;">Email Inquiries</strong>
+                  <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin: 0;">
+                    growth@stacklydigital.com<br>
+                    audit@stacklydigital.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- WhatsApp Direct Action -->
+            <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border-subtle);">
+              <a href="https://wa.me/919842755432?text=Hi%20Stackly!%20I'm%20interested%20in%20a%20digital%20marketing%20growth%20audit." target="_blank" rel="noopener" class="btn btn-outline btn-block" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <i class="bi bi-whatsapp" style="color: #25D366; font-size: 1.2rem;"></i> Chat with Growth Director
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Growth Audit Inquiry Form -->
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glow); border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-glow);">
+            <h3 style="font-size: 1.75rem; color: #FFFFFF; font-family: var(--font-heading); margin-bottom: 0.5rem;">Request Growth Consultation</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.75rem;">
+              Fill in your business details and our marketing strategists will prepare a custom competitive audit within 24 hours.
+            </p>
+
+            <form id="marketingInquiryForm" onsubmit="event.preventDefault(); handleMarketingInquiry();">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group">
+                  <label for="contactName" style="color: #E2E8F0; font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Full Name *</label>
+                  <input type="text" id="contactName" placeholder="e.g. Ramesh Kumar" required style="width: 100%; padding: 0.75rem 1rem; background: rgba(11, 15, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF; outline: none;">
+                </div>
+                <div class="form-group">
+                  <label for="contactEmail" style="color: #E2E8F0; font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Work Email *</label>
+                  <input type="email" id="contactEmail" placeholder="ramesh@company.com" required style="width: 100%; padding: 0.75rem 1rem; background: rgba(11, 15, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF; outline: none;">
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                <div class="form-group">
+                  <label for="contactPhone" style="color: #E2E8F0; font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Phone / WhatsApp *</label>
+                  <input type="tel" id="contactPhone" placeholder="+91 98427 12345" required style="width: 100%; padding: 0.75rem 1rem; background: rgba(11, 15, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF; outline: none;">
+                </div>
+                <div class="form-group">
+                  <label for="businessWebsite" style="color: #E2E8F0; font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Website / Brand URL</label>
+                  <input type="url" id="businessWebsite" placeholder="https://yourbrand.com" style="width: 100%; padding: 0.75rem 1rem; background: rgba(11, 15, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF; outline: none;">
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.25rem;">
+                <div class="form-group">
+                  <label for="serviceInterest" style="color: #E2E8F0; font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Service Needed</label>
+                  <select id="serviceInterest" style="width: 100%; padding: 0.75rem 1rem; background: rgba(11, 15, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF; outline: none;">
+                    <option value="ppc" selected>Performance PPC &amp; Paid Ads</option>
+                    <option value="seo">Search Engine Optimization (SEO)</option>
+                    <option value="social">Social Media &amp; Influencer Marketing</option>
+                    <option value="cro">CRO &amp; E-Commerce Funnel Scale</option>
+                    <option value="enterprise">Full Omnichannel Strategy</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="adBudget" style="color: #E2E8F0; font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Monthly Ad Spend Budget</label>
+                  <select id="adBudget" style="width: 100%; padding: 0.75rem 1rem; background: rgba(11, 15, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF; outline: none;">
+                    <option value="under1l">Under ₹1,00,000 / mo</option>
+                    <option value="1to5l" selected>₹1,00,000 - ₹5,00,000 / mo</option>
+                    <option value="5to20l">₹5,00,000 - ₹20,00,000 / mo</option>
+                    <option value="20lplus">₹20,00,000+ Enterprise</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 1.5rem;">
+                <label for="growthGoals" style="color: #E2E8F0; font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.35rem;">Current Challenge or Primary Growth Goal</label>
+                <textarea id="growthGoals" rows="3" placeholder="e.g. Scaling ROAS above 4x, improving organic rank on Google, lowering high customer acquisition cost..." style="width: 100%; padding: 0.75rem 1rem; background: rgba(11, 15, 25, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF; outline: none; resize: vertical;"></textarea>
+              </div>
+
+              <button type="submit" id="growthSubmitBtn" class="btn btn-primary btn-block btn-lg">
+                <i class="bi bi-send-fill"></i> Get Free Marketing Audit &amp; Plan
+              </button>
+            </form>
+
+            <div id="growthSuccessMsg" style="display: none; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; margin-top: 1.5rem;">
+              <i class="bi bi-check-circle-fill" style="color: #10B981; font-size: 2rem; display: block; margin-bottom: 0.5rem;"></i>
+              <h4 style="color: #FFFFFF; font-size: 1.2rem; margin-bottom: 0.25rem;">Audit Request Received!</h4>
+              <p style="color: #CBD5E1; font-size: 0.875rem; margin-bottom: 1rem;">
+                Our performance marketing director will review your brand metrics and contact you within 24 hours with a custom strategy breakdown.
+              </p>
+              <a href="https://wa.me/919842755432" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="border-color: #10B981; color: #34D399;">
+                <i class="bi bi-whatsapp"></i> Fast-Track on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         ACCURATE GOOGLE MAP LOCATION EMBED
+         ========================================== -->
+    <section class="section-padding bg-alt" style="padding-top: 3.5rem; padding-bottom: 3.5rem;" id="map-location">
+      <div class="container">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glow); border-radius: var(--radius-xl); overflow: hidden; box-shadow: var(--shadow-glow);">
+          <div style="padding: 1.75rem 2.25rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.25rem; border-bottom: 1px solid var(--border-subtle); background: rgba(3, 7, 30, 0.7);">
+            <div>
+              <span class="badge badge-subtle" style="margin-bottom: 0.35rem;"><i class="bi bi-geo-alt-fill text-primary"></i> Salem Agency Headquarters</span>
+              <h3 style="color: #FFF; font-size: 1.4rem; font-family: var(--font-heading); margin: 0 0 0.2rem 0;">Visit Stackly Digital Marketing Hub</h3>
+              <p style="color: var(--text-muted); font-size: 0.875rem; margin: 0;">42 Cherry Road, Hasthampatti, Salem, Tamil Nadu - 636007, India</p>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+              <a href="https://maps.google.com/?q=42+Cherry+Road,+Hasthampatti,+Salem,+Tamil+Nadu+636007" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+                <i class="bi bi-box-arrow-up-right"></i> Open in Google Maps
+              </a>
+              <a href="tel:+914278900111" class="btn btn-outline btn-sm" style="display: inline-flex; align-items: center; gap: 6px;">
+                <i class="bi bi-telephone-fill"></i> (0427) 244-8900
+              </a>
+            </div>
+          </div>
+
+          <div style="width: 100%; height: 380px; position: relative;">
+            <iframe 
+              src="https://maps.google.com/maps?q=42+Cherry+Road,+Hasthampatti,+Salem,+Tamil+Nadu+636007&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border: 0; filter: contrast(1.05) saturate(1.1); display: block;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Stackly Digital Marketing Agency Office Location Map">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       SITE FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-col footer-col-brand">
+        <a href="index.html" class="brand-logo" aria-label="Stackly Home">
+          <img src="assets/logo.webp" alt="Stackly Digital Marketing Agency" class="brand-logo-img">
+        </a>
+        <p class="footer-tagline">
+          Salem's premier performance digital marketing agency. Transforming brands with high-ROAS paid advertising, enterprise SEO, viral social campaigns, conversion rate optimization, and real-time revenue telemetry.
+        </p>
+        <div class="footer-social-links">
+          <a href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="404.html" aria-label="Twitter / X"><i class="bi bi-twitter-x"></i></a>
+          <a href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Col 2: Causes & Programs -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Causes &amp; Programs</h4>
+        <ul class="footer-link-list">
+          <li><a href="services.html">Explore Growth Services</a></li>
+          <li><a href="#popular-packages">All Growth Campaigns</a></li>
+          <li><a href="#popular-packages">Enterprise SEO Strategy</a></li>
+          <li><a href="#popular-packages">Performance PPC &amp; Meta Ads</a></li>
+          <li><a href="#popular-packages">Social &amp; Influencer Growth</a></li>
+          <li><a href="#popular-packages">Omnichannel Revenue Scaling</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Portals & Hubs -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Portals &amp; Hubs</h4>
+        <ul class="footer-link-list">
+          <li><a href="services.html"><span class="portal-emoji">⚡</span> Welcome Portal Hub</a></li>
+          <li><a href="client-dashboard.html" class="portal-highlight"><span class="portal-emoji">👤</span> Client Impact Workspace</a></li>
+          <li><a href="admin-dashboard.html"><span class="portal-emoji">📊</span> Admin Command Center</a></li>
+          <li><a href="get-started.html"><span class="portal-emoji">🚀</span> Get Started</a></li>
+          <li><a href="signin.html"><span class="portal-emoji">🔒</span> Account Sign In</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Salem Headquarters -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Salem Headquarters</h4>
+        <p class="footer-hq-row">
+          <strong class="footer-hq-label">Address:</strong> Stackly Marketing Hub, 42 Cherry Road, Hasthampatti, Salem, Tamil Nadu 636007, India
+        </p>
+        <p class="footer-hq-row">
+          <strong class="footer-hq-label">Hotline:</strong> +91 (0427) 244-8900
+        </p>
+        <p class="footer-hq-row">
+          <strong class="footer-hq-label">Email:</strong> care@stacklymarketing.com
+        </p>
+        <p class="footer-hq-row">
+          <strong class="footer-hq-label">Hours:</strong> Mon – Sat: 9:00 AM – 6:30 PM
+        </p>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="copyright">&copy; <span id="current-year">2026</span> Stackly Digital Marketing Agency. All rights reserved. Salem, Tamil Nadu, India.</p>
+      <div class="legal-links">
+        <a href="404.html">Privacy Policy</a>
+        <a href="404.html">Performance SLA</a>
+        <a href="404.html">Financial Audit Ledger</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

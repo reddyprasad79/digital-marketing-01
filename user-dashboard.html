@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Client Growth Dashboard - Stackly Digital Marketing Agency | Live ROAS, SEO & Campaign Telemetry">
+  <title>Client Portal | Stackly Digital Marketing Agency</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <style>
+    .campaign-banner-card {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 27, 75, 0.95) 50%, rgba(3, 105, 161, 0.95) 100%);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow-glow);
+    }
+    .campaign-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: rgba(16, 185, 129, 0.2);
+      color: #34D399;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .squad-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(11, 15, 25, 0.6);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+  </style>
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- ================= SIDEBAR NAVIGATION ================= -->
+    <aside class="dash-sidebar" id="dash-sidebar">
+      <div class="sidebar-brand-box">
+        <a href="index.html" class="sidebar-logo-link">
+          <img src="assets/logo.webp" alt="Stackly Digital" class="brand-logo-img">
+        </a>
+        <span class="sidebar-role-pill client-pill">Client Portal</span>
+      </div>
+
+      <!-- Client Brand Info Chip -->
+      <div class="client-brand-chip">
+        <div class="client-avatar" style="background: linear-gradient(135deg, var(--primary), var(--accent-cyan));">US</div>
+        <div>
+          <strong>UrbanStyle D2C</strong>
+          <small>Ramesh Kumar &bull; Scale Tier</small>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Growth Campaigns</div>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item active">
+            <a href="client-dashboard.html" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-speedometer2"></i></span>
+              <span>Live Performance</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#campaigns" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-graph-up-arrow"></i></span>
+              <span>Paid Ad Funnels</span>
+              <span class="sidebar-badge">4.8x ROAS</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#seo-intel" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-search"></i></span>
+              <span>SEO &amp; GEO Ranks</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#squad" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-headset"></i></span>
+              <span>Dedicated Squad</span>
+              <span class="sidebar-badge badge-alert">Live Desk</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">Account &amp; Billing</div>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item">
+            <a href="#reports" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-file-earmark-bar-graph"></i></span>
+              <span>Looker Studio Reports</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="index.html" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-arrow-left"></i></span>
+              <span>Return to Main Site</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="signin.html" class="sidebar-logout-btn">
+          <span class="nav-icon"><i class="bi bi-box-arrow-right"></i></span>
+          <span>Sign Out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN CONTENT AREA ================= -->
+    <main class="dash-main">
+      <!-- Top Bar -->
+      <header class="dash-topbar">
+        <div class="topbar-left">
+          <button class="dash-menu-toggle" id="dash-menu-toggle" aria-label="Toggle Navigation">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+          <div>
+            <h1 class="topbar-title">Welcome Back, Ramesh! 👋</h1>
+            <p class="topbar-subtitle">Your Q4 Scale Sprint is live with 4.8x average return on ad spend.</p>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <a href="https://wa.me/919842755432" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+            <i class="bi bi-whatsapp text-success"></i> WhatsApp Growth Squad
+          </a>
+          <a href="index.html#popular-packages" class="btn btn-primary btn-sm">
+            <i class="bi bi-plus-lg"></i> Scale Budget / Plan
+          </a>
+        </div>
+      </header>
+
+      <!-- Active Campaign Highlight Banner -->
+      <div class="campaign-banner-card">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="campaign-status-pill"><i class="bi bi-broadcast"></i> Live Campaign &bull; Scaling Mode</span>
+            <h2 style="color: #FFFFFF; font-size: 1.85rem; font-family: var(--font-heading); margin-top: 0.5rem; margin-bottom: 0.25rem;">
+              Full-Funnel Omnichannel Scale (Meta + Google Search)
+            </h2>
+            <p style="color: var(--accent-cyan); font-size: 0.95rem; margin: 0;">
+              Monthly Ad Spend: ₹4,50,000 &bull; Blended ROAS: 4.82x (Target: 4.0x)
+            </p>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.8rem; color: #CBD5E1; display: block;">Campaign ID</span>
+            <strong style="color: #FFF; font-family: var(--font-heading); font-size: 1.1rem;">#STK-MKT-UB90</strong>
+          </div>
+        </div>
+
+        <p style="color: #E2E8F0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; max-width: 780px;">
+          Dynamic Advantage+ catalog ads scaling across Instagram Reels &amp; Feeds paired with high-intent Google Search phrase matches. CAPI server-side event match quality rating is 9.4/10.
+        </p>
+
+        <!-- Dedicated Squad Strip -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; margin-bottom: 1.75rem;">
+          <div class="squad-badge">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(6, 182, 212, 0.2); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); font-size: 1.25rem;">
+              <i class="bi bi-person-badge"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: #94A3B8; display: block;">Lead Growth Strategist</span>
+              <strong style="color: #FFF; font-size: 0.95rem;">Ananya Ramakrishnan</strong>
+              <small style="color: #34D399; display: block;">Google &amp; Meta Certified Specialist</small>
+            </div>
+          </div>
+
+          <div class="squad-badge">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(16, 185, 129, 0.2); display: flex; align-items: center; justify-content: center; color: #10B981; font-size: 1.25rem;">
+              <i class="bi bi-graph-up"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: #94A3B8; display: block;">Technical SEO Lead</span>
+              <strong style="color: #FFF; font-size: 0.95rem;">Venkatesh Babu</strong>
+              <small style="color: #94A3B8; display: block;">38 Keywords in Google Top 3</small>
+            </div>
+          </div>
+
+          <div class="squad-badge">
+            <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(99, 102, 241, 0.2); display: flex; align-items: center; justify-content: center; color: #FB7185; font-size: 1.25rem;">
+              <i class="bi bi-speedometer2"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.75rem; color: #94A3B8; display: block;">Telemetry Status</span>
+              <strong style="color: #FFF; font-size: 0.95rem;">GA4 + CAPI Active</strong>
+              <small style="color: #34D399; display: block;">Zero Tracking Drop-off</small>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="showToast('Opening live Looker Studio interactive dashboard...', '📊');">
+            <i class="bi bi-file-earmark-bar-graph"></i> Open 24/7 Looker Studio Dashboard
+          </button>
+          <a href="https://wa.me/919842755432?text=Hi%20Stackly!%20Discussing%20ROAS%20scaling%20for%20UrbanStyle%20D2C" target="_blank" rel="noopener" class="btn btn-outline" style="border-color: rgba(255,255,255,0.4); color: #FFF;">
+            <i class="bi bi-whatsapp text-success"></i> Slack/WhatsApp Strategy Squad
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick KPI Metrics Grid -->
+      <div class="kpi-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+        <div class="kpi-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+          <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Current Month Attributed Revenue</span>
+          <h3 style="color: #FFF; font-size: 1.85rem; font-family: var(--font-heading); margin: 0.25rem 0;">₹21.68 Lakhs</h3>
+          <span style="color: #10B981; font-size: 0.8rem;"><i class="bi bi-arrow-up-right"></i> +38% MoM Growth</span>
+        </div>
+
+        <div class="kpi-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+          <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Average Return on Ad Spend</span>
+          <h3 style="color: var(--accent-cyan); font-size: 1.85rem; font-family: var(--font-heading); margin: 0.25rem 0;">4.82x ROAS</h3>
+          <span style="color: #34D399; font-size: 0.8rem;">Target: 4.0x (+20.5% Ahead)</span>
+        </div>
+
+        <div class="kpi-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+          <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Customer Acquisition Cost (CAC)</span>
+          <h3 style="color: #F59E0B; font-size: 1.85rem; font-family: var(--font-heading); margin: 0.25rem 0;">₹420</h3>
+          <span style="color: #34D399; font-size: 0.8rem;"><i class="bi bi-arrow-down-left"></i> Decreased by 42%</span>
+        </div>
+
+        <div class="kpi-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+          <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Organic Google Visitors</span>
+          <h3 style="color: #FB7185; font-size: 1.85rem; font-family: var(--font-heading); margin: 0.25rem 0;">18,450 / mo</h3>
+          <span style="color: #10B981; font-size: 0.8rem;">+145% Organic Lift</span>
+        </div>
+      </div>
+
+      <!-- Past Sprint SOW & Invoices Table -->
+      <section id="history" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
+        <h3 style="color: #FFFFFF; font-size: 1.35rem; font-family: var(--font-heading); margin-bottom: 1.25rem;">
+          Growth Sprints &amp; Performance Invoices
+        </h3>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--border-subtle); color: #94A3B8;">
+                <th style="padding: 12px 16px;">Sprint ID</th>
+                <th style="padding: 12px 16px;">Service Scope</th>
+                <th style="padding: 12px 16px;">Period</th>
+                <th style="padding: 12px 16px;">Ad Spend Managed</th>
+                <th style="padding: 12px 16px;">Verified ROAS</th>
+                <th style="padding: 12px 16px;">Status</th>
+                <th style="padding: 12px 16px;">Report</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: #E2E8F0;">
+                <td style="padding: 14px 16px; font-weight: 700; color: #FB7185;">#STK-SPR-Q3</td>
+                <td style="padding: 14px 16px;">Q3 Performance PPC &amp; CAPI Telemetry</td>
+                <td style="padding: 14px 16px;">Jul – Sep 2026</td>
+                <td style="padding: 14px 16px;">₹12,50,000</td>
+                <td style="padding: 14px 16px; color: #34D399; font-weight: 700;">4.65x</td>
+                <td style="padding: 14px 16px;"><span style="color: #10B981; font-weight: 600;"><i class="bi bi-check2-all"></i> Target Exceeded</span></td>
+                <td style="padding: 14px 16px;"><button class="btn btn-outline btn-sm" onclick="showToast('Downloading Q3 Executive Performance PDF...', '📊');">PDF Report</button></td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: #E2E8F0;">
+                <td style="padding: 14px 16px; font-weight: 700; color: #FB7185;">#STK-SPR-SEO</td>
+                <td style="padding: 14px 16px;">Technical SEO &amp; Generative Engine Optimization</td>
+                <td style="padding: 14px 16px;">May – Jul 2026</td>
+                <td style="padding: 14px 16px;">Retainer Tier</td>
+                <td style="padding: 14px 16px; color: #34D399; font-weight: 700;">+210% Traffic</td>
+                <td style="padding: 14px 16px;"><span style="color: #10B981; font-weight: 600;"><i class="bi bi-check2-all"></i> Completed</span></td>
+                <td style="padding: 14px 16px;"><button class="btn btn-outline btn-sm" onclick="showToast('Downloading SEO audit report...', '📊');">PDF Report</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Recommended Add-On Growth Modules -->
+      <section style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem;">
+        <h3 style="color: #FFFFFF; font-size: 1.35rem; font-family: var(--font-heading); margin-bottom: 1.25rem;">
+          Recommended Next Growth Modules for UrbanStyle D2C
+        </h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div style="background: rgba(11, 15, 25, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+            <span style="color: var(--accent-cyan); font-size: 0.8rem; font-weight: 700;">Email Retention</span>
+            <h4 style="color: #FFF; font-size: 1.15rem; margin: 0.35rem 0;">Klaviyo Lifecycle Automation</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
+              6-tier automated abandoned cart, browse abandonment, and VIP customer retention email flows.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong style="color: #10B981;">+28% Addl Revenue</strong>
+              <a href="index.html#popular-packages" class="btn btn-sm btn-outline">Explore Plan</a>
+            </div>
+          </div>
+
+          <div style="background: rgba(11, 15, 25, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+            <span style="color: #FB7185; font-size: 0.8rem; font-weight: 700;">Viral Creative</span>
+            <h4 style="color: #FFF; font-size: 1.15rem; margin: 0.35rem 0;">UGC Video Creator Lab</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
+              16 custom creator hooks and TikTok/Reels video variations designed to lower CAC and defeat ad fatigue.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong style="color: #10B981;">₹29,999 / mo</strong>
+              <a href="index.html#popular-packages" class="btn btn-sm btn-outline">Explore Plan</a>
+            </div>
+          </div>
+
+          <div style="background: rgba(11, 15, 25, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+            <span style="color: #F59E0B; font-size: 0.8rem; font-weight: 700;">Checkout CRO</span>
+            <h4 style="color: #FFF; font-size: 1.15rem; margin: 0.35rem 0;">A/B Checkout Rate Optimization</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
+              Heatmap testing, 1-click mobile checkout friction reduction, and average order value bundle upsells.
+            </p>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <strong style="color: #10B981;">2.4x Conversion Lift</strong>
+              <a href="index.html#popular-packages" class="btn btn-sm btn-outline">Explore Plan</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Mobile Sidebar Backdrop -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <div class="toast-notification" id="toast" role="status" aria-live="polite"></div>
+  <script src="dashboard.js"></script>
+</body>
+</html>

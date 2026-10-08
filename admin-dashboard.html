@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stackly Agency Operations Hub - Ad Accounts, Campaign ROAS, Multi-Channel Client Portfolio">
+  <title>Agency Admin Hub | Stackly Digital Marketing Agency</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/logo.webp">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+
+  <div class="dashboard-layout">
+    <!-- ================= SIDEBAR NAVIGATION ================= -->
+    <aside class="dash-sidebar" id="dash-sidebar">
+      <div class="sidebar-brand-box">
+        <a href="index.html" class="sidebar-logo-link">
+          <img src="assets/logo.webp" alt="Stackly Digital" class="brand-logo-img">
+        </a>
+        <span class="sidebar-role-pill admin-pill">Agency Admin</span>
+      </div>
+
+      <!-- Admin Profile Chip -->
+      <div class="client-brand-chip">
+        <div class="client-avatar" style="background: linear-gradient(135deg, #E11D48, #BE123C); color: #FFF;">SS</div>
+        <div>
+          <strong>Sundaram S.</strong>
+          <small>Managing Director &bull; Agency Lead</small>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Operations Hub</div>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item active">
+            <a href="#admin-overview" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-speedometer2"></i></span>
+              <span>Overview &amp; ROAS KPIs</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#bookings-feed" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-graph-up-arrow"></i></span>
+              <span>Client Ad Accounts</span>
+              <span class="sidebar-badge">48 Active</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#whatsapp-desk" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-whatsapp"></i></span>
+              <span>Client Strategy Desk</span>
+              <span class="sidebar-badge badge-alert">3 Alerts</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav-section-title">Quick Links</div>
+        <ul class="sidebar-nav-list">
+          <li class="sidebar-nav-item">
+            <a href="index.html" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-globe"></i></span>
+              <span>View Live Website</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="client-dashboard.html" class="sidebar-nav-link">
+              <span class="nav-icon"><i class="bi bi-person-badge"></i></span>
+              <span>Switch to Client View</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="signin.html" class="sidebar-logout-btn">
+          <span class="nav-icon"><i class="bi bi-box-arrow-right"></i></span>
+          <span>Sign Out</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ================= MAIN CONTENT AREA ================= -->
+    <main class="dash-main">
+      <!-- Top Bar -->
+      <header class="dash-topbar">
+        <div class="topbar-left">
+          <button class="dash-menu-toggle" id="dash-menu-toggle" aria-label="Toggle Navigation">
+            <i class="bi bi-list fs-4"></i>
+          </button>
+          <div>
+            <h1 class="topbar-title">Agency Performance Command Hub ⚡</h1>
+            <p class="topbar-subtitle">Active Client Retainers &bull; Ad Spend Scaling &bull; CAPI Telemetry</p>
+          </div>
+        </div>
+
+        <div class="topbar-right">
+          <button class="btn btn-outline btn-sm" onclick="exportAdminDataCSV();">
+            <i class="bi bi-download"></i> Export Data (CSV)
+          </button>
+          <button class="btn btn-primary btn-sm" onclick="openModal('onboardBrandModal');">
+            <i class="bi bi-plus-lg"></i> Onboard New Brand
+          </button>
+        </div>
+      </header>
+
+      <!-- Operations Stats Grid -->
+      <div class="kpi-grid" id="admin-overview" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+        <div class="kpi-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+          <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Active Managed Brands</span>
+          <h3 style="color: var(--accent-cyan); font-size: 2rem; font-family: var(--font-heading); margin: 0.25rem 0;">48</h3>
+          <span style="color: #10B981; font-size: 0.8rem;"><i class="bi bi-arrow-up-right"></i> +32% QoQ growth</span>
+        </div>
+
+        <div class="kpi-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+          <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Monthly Ad Spend Managed</span>
+          <h3 style="color: #34D399; font-size: 2rem; font-family: var(--font-heading); margin: 0.25rem 0;">₹1.84 Crores</h3>
+          <span style="color: #10B981; font-size: 0.8rem;"><i class="bi bi-check2"></i> Meta &amp; Google Ads</span>
+        </div>
+
+        <div class="kpi-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+          <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Blended Portfolio ROAS</span>
+          <h3 style="color: #FB7185; font-size: 2rem; font-family: var(--font-heading); margin: 0.25rem 0;">4.8x</h3>
+          <span style="color: #34D399; font-size: 0.8rem;">Benchmark: 3.5x (+37% Lift)</span>
+        </div>
+
+        <div class="kpi-card" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+          <span style="font-size: 0.8rem; color: var(--text-dim); text-transform: uppercase;">Client Retention Rate</span>
+          <h3 style="color: #FDA4AF; font-size: 2rem; font-family: var(--font-heading); margin: 0.25rem 0;">99.2%</h3>
+          <span style="color: #10B981; font-size: 0.8rem;"><i class="bi bi-star-fill text-primary"></i> 4.96 CSAT Rating</span>
+        </div>
+      </div>
+
+      <!-- Live Client Accounts Management Table -->
+      <section id="bookings-feed" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h3 style="color: #FFFFFF; font-size: 1.35rem; font-family: var(--font-heading); margin: 0;">
+              Active Client Growth Retainers &amp; Ad Performance
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Real-time ROAS telemetry tracked via Meta CAPI &amp; Google Ads APIs</p>
+          </div>
+          <span style="background: rgba(16, 185, 129, 0.15); color: #34D399; font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 9999px;">
+            <i class="bi bi-broadcast"></i> Live GA4/CAPI Telemetry Sync
+          </span>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--border-subtle); color: #94A3B8;">
+                <th style="padding: 12px 16px;">Account ID</th>
+                <th style="padding: 12px 16px;">Brand &amp; Contact</th>
+                <th style="padding: 12px 16px;">Growth Plan Scope</th>
+                <th style="padding: 12px 16px;">Monthly Ad Spend</th>
+                <th style="padding: 12px 16px;">Current ROAS</th>
+                <th style="padding: 12px 16px;">Status</th>
+                <th style="padding: 12px 16px;">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: #E2E8F0;">
+                <td style="padding: 14px 16px; font-weight: 700; color: #FB7185;">#STK-MKT-UB90</td>
+                <td style="padding: 14px 16px;"><strong>UrbanStyle D2C</strong><br><small style="color: #94A3B8;">Ramesh Kumar &bull; Founder</small></td>
+                <td style="padding: 14px 16px;">Performance PPC &amp; Advantage+ Meta</td>
+                <td style="padding: 14px 16px;">₹4,50,000 / mo</td>
+                <td style="padding: 14px 16px; color: #34D399; font-weight: 700;">4.82x ROAS</td>
+                <td style="padding: 14px 16px;"><span style="color: #10B981; font-weight: 600;"><i class="bi bi-check-circle-fill"></i> Scaling</span></td>
+                <td style="padding: 14px 16px;">
+                  <button class="btn btn-sm btn-outline" onclick="openManageAccountModal('#STK-MKT-UB90', 'UrbanStyle D2C', '₹4,50,000 / mo', '4.82x ROAS');">Manage</button>
+                </td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: #E2E8F0;">
+                <td style="padding: 14px 16px; font-weight: 700; color: #FB7185;">#STK-MKT-CM44</td>
+                <td style="padding: 14px 16px;"><strong>CloudMatrix Tech</strong><br><small style="color: #94A3B8;">Deepika Prasanth &bull; VP Growth</small></td>
+                <td style="padding: 14px 16px;">B2B Lead Generation &amp; ABM LinkedIn</td>
+                <td style="padding: 14px 16px;">₹3,20,000 / mo</td>
+                <td style="padding: 14px 16px; color: #34D399; font-weight: 700;">48 Qualified Demos</td>
+                <td style="padding: 14px 16px;"><span style="color: #10B981; font-weight: 600;"><i class="bi bi-check-circle-fill"></i> Active</span></td>
+                <td style="padding: 14px 16px;">
+                  <button class="btn btn-sm btn-outline" onclick="openManageAccountModal('#STK-MKT-CM44', 'CloudMatrix Tech', '₹3,20,000 / mo', '48 Qualified Demos');">Manage</button>
+                </td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: #E2E8F0;">
+                <td style="padding: 14px 16px; font-weight: 700; color: #FB7185;">#STK-MKT-AP19</td>
+                <td style="padding: 14px 16px;"><strong>Apex Logistics</strong><br><small style="color: #94A3B8;">Vignesh Sundaram &bull; MD</small></td>
+                <td style="padding: 14px 16px;">Enterprise SEO &amp; Generative Engine Optimization</td>
+                <td style="padding: 14px 16px;">₹1,80,000 Retainer</td>
+                <td style="padding: 14px 16px; color: #34D399; font-weight: 700;">38 #1 Ranks</td>
+                <td style="padding: 14px 16px;"><span style="color: #10B981; font-weight: 600;"><i class="bi bi-check-circle-fill"></i> Dominating</span></td>
+                <td style="padding: 14px 16px;">
+                  <button class="btn btn-sm btn-outline" onclick="openManageAccountModal('#STK-MKT-AP19', 'Apex Logistics', '₹1,80,000 Retainer', '38 #1 Ranks');">Manage</button>
+                </td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: #E2E8F0;">
+                <td style="padding: 14px 16px; font-weight: 700; color: #FB7185;">#STK-MKT-NV55</td>
+                <td style="padding: 14px 16px;"><strong>Nova Organics</strong><br><small style="color: #94A3B8;">Vikram Reddy &bull; CMO</small></td>
+                <td style="padding: 14px 16px;">Viral Reels Studio &amp; Influencer UGC</td>
+                <td style="padding: 14px 16px;">₹2,40,000 / mo</td>
+                <td style="padding: 14px 16px; color: #FB7185; font-weight: 700;">1.2M Video Views</td>
+                <td style="padding: 14px 16px;"><span style="color: #FB7185; font-weight: 600;"><i class="bi bi-clock-history"></i> Creative Sprint</span></td>
+                <td style="padding: 14px 16px;">
+                  <button class="btn btn-sm btn-primary" onclick="deployCreativeSprint(this, 'Nova Organics');">Send Creatives</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Channel Allocation & Quick Agency Actions -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <!-- Channel Ad Spend Distribution -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem;">
+          <h4 style="color: #FFF; font-size: 1.2rem; font-family: var(--font-heading); margin-bottom: 1rem;">
+            Ad Spend by Platform (Active Month)
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem;">
+              <span><i class="bi bi-meta text-primary"></i> Meta Ads (Instagram Reels &amp; Feeds)</span>
+              <strong style="color: #34D399;">₹88 Lakhs (48%)</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem;">
+              <span><i class="bi bi-google text-primary"></i> Google Search &amp; Performance Max</span>
+              <strong style="color: #34D399;">₹62 Lakhs (34%)</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem;">
+              <span><i class="bi bi-linkedin text-primary"></i> LinkedIn Campaign Manager (B2B)</span>
+              <strong style="color: #F59E0B;">₹24 Lakhs (13%)</strong>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span><i class="bi bi-envelope-check text-primary"></i> Klaviyo &amp; Lifecycle Automation</span>
+              <strong style="color: #34D399;">₹10 Lakhs (5%)</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Agency Actions -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem;">
+          <h4 style="color: #FFF; font-size: 1.2rem; font-family: var(--font-heading); margin-bottom: 1rem;">
+            Quick Agency Operations
+          </h4>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <button class="btn btn-outline" style="text-align: left; padding: 1rem;" onclick="triggerLaunchAdTest();">
+              <i class="bi bi-lightning-charge fs-5 d-block text-primary"></i>
+              <strong style="display: block; color: #FFF; margin-top: 4px;">Launch Ad Test</strong>
+              <small style="color: #94A3B8;">12 Fresh Video Hooks</small>
+            </button>
+            <button class="btn btn-outline" style="text-align: left; padding: 1rem;" onclick="triggerAuditTelemetry();">
+              <i class="bi bi-shield-check fs-5 d-block text-success"></i>
+              <strong style="display: block; color: #FFF; margin-top: 4px;">Audit Telemetry</strong>
+              <small style="color: #94A3B8;">Event Match 9.4/10</small>
+            </button>
+            <button class="btn btn-outline" style="text-align: left; padding: 1rem;" onclick="triggerNotifyClients();">
+              <i class="bi bi-whatsapp fs-5 d-block text-success"></i>
+              <strong style="display: block; color: #FFF; margin-top: 4px;">Notify Clients</strong>
+              <small style="color: #94A3B8;">Weekly Growth Pulse</small>
+            </button>
+            <button class="btn btn-outline" style="text-align: left; padding: 1rem;" onclick="triggerAgencyROIReport();">
+              <i class="bi bi-graph-up-arrow fs-5 d-block text-primary"></i>
+              <strong style="display: block; color: #FFF; margin-top: 4px;">Agency Master ROI</strong>
+              <small style="color: #94A3B8;">Consolidated P&amp;L</small>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           SECTION 4: CLIENT STRATEGY DESK (#whatsapp-desk)
+           ========================================== -->
+      <section id="whatsapp-desk" style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 2rem; margin-top: 2rem; margin-bottom: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h3 style="color: #FFFFFF; font-size: 1.35rem; font-family: var(--font-heading); margin: 0;">
+              Client Strategy Desk &amp; Rapid Escalation Queue
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Direct WhatsApp &amp; Slack priority communications with assigned brand founders</p>
+          </div>
+          <span style="background: rgba(251, 113, 133, 0.15); color: #FB7185; font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 9999px;">
+            <i class="bi bi-bell-fill"></i> 3 Priority Action Tickets
+          </span>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; margin-bottom: 2rem;">
+          <!-- Ticket 1 -->
+          <div style="background: rgba(10, 10, 10, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+              <div>
+                <strong style="color: #FFF; font-size: 1.05rem; display: block;">UrbanStyle D2C</strong>
+                <small style="color: #FB7185;">Ramesh Kumar (Founder)</small>
+              </div>
+              <span style="background: rgba(16, 185, 129, 0.15); color: #34D399; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">High Priority</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.25rem;">
+              Requested +₹50k/day Diwali festive budget expansion after Meta Advantage+ catalog hit 5.42x ROAS benchmark.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="btn btn-primary btn-sm" onclick="showToast('UrbanStyle budget increased to ₹5,00,000/mo! Bid pacing recalibrated.', '🚀');">
+                <i class="bi bi-check2"></i> Approve &amp; Scale
+              </button>
+              <a href="https://wa.me/919842755432?text=Hi%20Ramesh!%20Your%20Diwali%20scale%20request%20is%20approved." target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+                <i class="bi bi-whatsapp text-success"></i> WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <!-- Ticket 2 -->
+          <div style="background: rgba(10, 10, 10, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+              <div>
+                <strong style="color: #FFF; font-size: 1.05rem; display: block;">Kovai Agro Oils</strong>
+                <small style="color: #FB7185;">Senthil Nathan (Director)</small>
+              </div>
+              <span style="background: rgba(251, 113, 133, 0.15); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">Creative Sprint</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.25rem;">
+              Ad fatigue detected on primary cold traffic video. 16 fresh UGC creator hooks rendered and awaiting dispatch.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="btn btn-outline btn-sm" onclick="showToast('Dispatched 16 fresh UGC hooks into Kovai Agro campaign rotation!', '🎬');">
+                <i class="bi bi-play-circle"></i> Deploy UGC Hooks
+              </button>
+              <a href="mailto:senthil@kovaiagro.com?subject=Stackly%20UGC%20Creative%20Refresh" class="btn btn-outline btn-sm">
+                <i class="bi bi-envelope"></i> Email Brief
+              </a>
+            </div>
+          </div>
+
+          <!-- Ticket 3 -->
+          <div style="background: rgba(10, 10, 10, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+              <div>
+                <strong style="color: #FFF; font-size: 1.05rem; display: block;">Salem Granite Exports</strong>
+                <small style="color: #FB7185;">Rajeshwari M. (Export Head)</small>
+              </div>
+              <span style="background: rgba(251, 113, 133, 0.15); color: #FB7185; font-size: 0.75rem; font-weight: 700; padding: 3px 8px; border-radius: 4px;">B2B Telemetry</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.25rem;">
+              International buyer RFQ webhook synced. 42 inbound trade inquiries captured in CRM this week.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="btn btn-outline btn-sm" onclick="showToast('B2B Telemetry verified: CRM webhook 100% active!', '🛡️');">
+                <i class="bi bi-shield-check"></i> Verify Webhook
+              </button>
+              <button class="btn btn-outline btn-sm" onclick="this.closest('div[style*=\'background: rgba(10, 10, 10\']').remove(); showToast('Ticket archived.', '📁');">
+                <i class="bi bi-archive"></i> Archive Ticket
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Strategy Desk Direct Message Broadcast -->
+        <div style="background: rgba(10, 10, 10, 0.6); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem;">
+          <h4 style="color: #FFF; font-size: 1rem; margin-bottom: 0.5rem;"><i class="bi bi-broadcast text-primary"></i> Dispatch Agency Strategy Pulse to All Retainers</h4>
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+            <input type="text" id="adminBroadcastInput" placeholder="e.g. Q4 Meta Advantage+ algorithm pacing update applied across all ad sets..." style="flex: 1; min-width: 260px; padding: 0.65rem 0.85rem; background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF;">
+            <button class="btn btn-primary" onclick="const val=document.getElementById('adminBroadcastInput')?.value; if(val){ showToast('Dispatched strategy bulletin to 48 client WhatsApp and Slack desks!', '📢'); document.getElementById('adminBroadcastInput').value=''; } else { showToast('Please type a strategy bulletin message.', '⚠️'); }">
+              <i class="bi bi-send-fill"></i> Broadcast Pulse
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- ==========================================
+       ADMIN INTERACTIVE MODALS
+       ========================================== -->
+
+  <!-- Modal 1: Onboard New Brand -->
+  <div class="dash-modal" id="onboardBrandModal" role="dialog" aria-modal="true">
+    <div class="dash-modal-backdrop" onclick="closeModal('onboardBrandModal');"></div>
+    <div class="dash-modal-dialog">
+      <div class="dash-modal-header">
+        <h3 class="dash-modal-title"><i class="bi bi-plus-circle text-primary"></i> Onboard New Brand Client</h3>
+        <button class="dash-modal-close" onclick="closeModal('onboardBrandModal');">&times;</button>
+      </div>
+      <form onsubmit="handleOnboardNewBrand(event);">
+        <div class="dash-modal-body">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+            <div>
+              <label style="color: #CBD5E1; font-size: 0.85rem; display: block; margin-bottom: 0.35rem;">Brand Name *</label>
+              <input type="text" id="newBrandName" required placeholder="e.g. Kaveri Silk Sarees" style="width: 100%; padding: 0.65rem 0.85rem; background: rgba(10, 10, 10, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF;">
+            </div>
+            <div>
+              <label style="color: #CBD5E1; font-size: 0.85rem; display: block; margin-bottom: 0.35rem;">Founder / Contact Lead *</label>
+              <input type="text" id="newBrandContact" required placeholder="e.g. Anandhi M. (Director)" style="width: 100%; padding: 0.65rem 0.85rem; background: rgba(10, 10, 10, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF;">
+            </div>
+          </div>
+
+          <div style="margin-bottom: 1rem;">
+            <label style="color: #CBD5E1; font-size: 0.85rem; display: block; margin-bottom: 0.35rem;">Growth Plan Scope *</label>
+            <select id="newBrandScope" style="width: 100%; padding: 0.65rem 0.85rem; background: rgba(10, 10, 10, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF;">
+              <option value="Performance PPC &amp; Advantage+ Meta">Performance PPC &amp; Advantage+ Meta</option>
+              <option value="Enterprise SEO &amp; GEO Generative Search">Enterprise SEO &amp; GEO Generative Search</option>
+              <option value="Viral Reels Studio &amp; Influencer UGC">Viral Reels Studio &amp; Influencer UGC</option>
+              <option value="B2B Lead Generation &amp; ABM LinkedIn">B2B Lead Generation &amp; ABM LinkedIn</option>
+            </select>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label style="color: #CBD5E1; font-size: 0.85rem; display: block; margin-bottom: 0.35rem;">Monthly Ad Spend *</label>
+              <input type="text" id="newBrandSpend" value="₹3,50,000 / mo" required style="width: 100%; padding: 0.65rem 0.85rem; background: rgba(10, 10, 10, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF;">
+            </div>
+            <div>
+              <label style="color: #CBD5E1; font-size: 0.85rem; display: block; margin-bottom: 0.35rem;">Target Benchmark ROAS *</label>
+              <input type="text" id="newBrandRoas" value="4.50x ROAS" required style="width: 100%; padding: 0.65rem 0.85rem; background: rgba(10, 10, 10, 0.7); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); color: #FFF;">
+            </div>
+          </div>
+        </div>
+        <div class="dash-modal-footer">
+          <button type="button" class="btn btn-outline btn-sm" onclick="closeModal('onboardBrandModal');">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm"><i class="bi bi-check-lg"></i> Complete Onboarding</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal 2: Manage Account -->
+  <div class="dash-modal" id="accountManageModal" role="dialog" aria-modal="true">
+    <div class="dash-modal-backdrop" onclick="closeModal('accountManageModal');"></div>
+    <div class="dash-modal-dialog">
+      <div class="dash-modal-header">
+        <div>
+          <h3 class="dash-modal-title" id="manageModalBrandName">Brand Account Management</h3>
+          <small style="color: #FB7185;" id="manageModalAccountId">#STK-MKT-0000</small>
+        </div>
+        <button class="dash-modal-close" onclick="closeModal('accountManageModal');">&times;</button>
+      </div>
+      <div class="dash-modal-body">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="background: rgba(10, 10, 10, 0.7); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <span style="font-size: 0.8rem; color: var(--text-dim); display: block;">Active Ad Spend</span>
+            <strong style="color: #34D399; font-size: 1.25rem;" id="manageModalSpend">₹4,50,000 / mo</strong>
+          </div>
+          <div style="background: rgba(10, 10, 10, 0.7); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <span style="font-size: 0.8rem; color: var(--text-dim); display: block;">Current Performance</span>
+            <strong style="color: #FB7185; font-size: 1.25rem;" id="manageModalRoas">4.82x ROAS</strong>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <button class="btn btn-outline" style="text-align: left; display: flex; justify-content: space-between; align-items: center;" onclick="showToast('Increased daily ad spend cap by 25% for high-ROAS scaling!', '📈'); closeModal('accountManageModal');">
+            <span><i class="bi bi-graph-up-arrow text-success"></i> Boost Budget by +25%</span>
+            <small style="color: #34D399;">High Scaling</small>
+          </button>
+          <button class="btn btn-outline" style="text-align: left; display: flex; justify-content: space-between; align-items: center;" onclick="showToast('Swapped to backup UGC creative set to avoid ad fatigue.', '🔄'); closeModal('accountManageModal');">
+            <span><i class="bi bi-arrow-repeat text-primary"></i> Swap Creative Variations</span>
+            <small style="color: #94A3B8;">16 Hooks Ready</small>
+          </button>
+          <button class="btn btn-outline" style="text-align: left; display: flex; justify-content: space-between; align-items: center;" onclick="showToast('Dispatched campaign diagnostic report to client Slack!', '📩'); closeModal('accountManageModal');">
+            <span><i class="bi bi-send text-primary"></i> Send Direct Health Report</span>
+            <small style="color: #94A3B8;">Slack &amp; WhatsApp</small>
+          </button>
+        </div>
+      </div>
+      <div class="dash-modal-footer">
+        <button class="btn btn-outline btn-sm" onclick="closeModal('accountManageModal');">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Ad Test Simulation -->
+  <div class="dash-modal" id="adTestModal" role="dialog" aria-modal="true">
+    <div class="dash-modal-backdrop" onclick="closeModal('adTestModal');"></div>
+    <div class="dash-modal-dialog">
+      <div class="dash-modal-header">
+        <h3 class="dash-modal-title"><i class="bi bi-lightning-charge-fill text-primary"></i> Creative Velocity Lab &bull; A/B Test</h3>
+        <button class="dash-modal-close" onclick="closeModal('adTestModal');">&times;</button>
+      </div>
+      <div class="dash-modal-body">
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
+          12 fresh short-form video hooks ready for algorithmic deployment across Meta Advantage+ and TikTok Ads:
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem;">
+          <div style="background: rgba(10, 10, 10, 0.7); padding: 0.85rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; justify-content: space-between;">
+            <span style="color: #FFF;"><i class="bi bi-play-circle text-primary"></i> Hook 01: "Why 80% of founders fail this test"</span>
+            <strong style="color: #34D399;">3.2s Retention</strong>
+          </div>
+          <div style="background: rgba(10, 10, 10, 0.7); padding: 0.85rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; justify-content: space-between;">
+            <span style="color: #FFF;"><i class="bi bi-play-circle text-primary"></i> Hook 02: "Unboxing without the marketing fluff"</span>
+            <strong style="color: #34D399;">4.1s Retention</strong>
+          </div>
+          <div style="background: rgba(10, 10, 10, 0.7); padding: 0.85rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle); display: flex; justify-content: space-between;">
+            <span style="color: #FFF;"><i class="bi bi-play-circle text-primary"></i> Hook 03: "Before vs After 30-Day Case Study"</span>
+            <strong style="color: #34D399;">4.8s Retention</strong>
+          </div>
+        </div>
+      </div>
+      <div class="dash-modal-footer">
+        <button class="btn btn-outline btn-sm" onclick="closeModal('adTestModal');">Cancel</button>
+        <button class="btn btn-primary btn-sm" onclick="showToast('12 A/B Hook Variations launched into live test rotation!', '🚀'); closeModal('adTestModal');">
+          <i class="bi bi-rocket-takeoff-fill"></i> Deploy Test to Meta &amp; TikTok
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: Telemetry Audit -->
+  <div class="dash-modal" id="telemetryModal" role="dialog" aria-modal="true">
+    <div class="dash-modal-backdrop" onclick="closeModal('telemetryModal');"></div>
+    <div class="dash-modal-dialog">
+      <div class="dash-modal-header">
+        <h3 class="dash-modal-title"><i class="bi bi-shield-check text-success"></i> Server-Side Telemetry Health Audit</h3>
+        <button class="dash-modal-close" onclick="closeModal('telemetryModal');">&times;</button>
+      </div>
+      <div class="dash-modal-body">
+        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: var(--radius-sm); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong style="color: #FFF; display: block;">Meta Conversions API (CAPI)</strong>
+              <small style="color: #94A3B8;">Server event deduping active &bull; Event Match: 9.4 / 10</small>
+            </div>
+            <span style="color: #10B981; font-weight: 700;"><i class="bi bi-check-circle-fill"></i> Optimal</span>
+          </div>
+
+          <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: var(--radius-sm); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong style="color: #FFF; display: block;">Google Analytics 4 (GA4) Server GTM</strong>
+              <small style="color: #94A3B8;">Cloud Run proxy latency: 18ms &bull; Zero cookie drop</small>
+            </div>
+            <span style="color: #10B981; font-weight: 700;"><i class="bi bi-check-circle-fill"></i> Optimal</span>
+          </div>
+
+          <div style="background: rgba(251, 113, 133, 0.1); border: 1px solid rgba(251, 113, 133, 0.3); padding: 1rem; border-radius: var(--radius-sm); display: flex; justify-content: space-between; align-items: center;">
+            <div>
+              <strong style="color: #FFF; display: block;">Looker Studio Bi-Directional Feed</strong>
+              <small style="color: #94A3B8;">48 Client Workspaces Synced Every 15 Minutes</small>
+            </div>
+            <span style="color: #FB7185; font-weight: 700;"><i class="bi bi-arrow-repeat"></i> Synced</span>
+          </div>
+        </div>
+      </div>
+      <div class="dash-modal-footer">
+        <button class="btn btn-primary btn-sm" onclick="closeModal('telemetryModal'); showToast('Telemetry verified: All client pipelines 100% operational!', '🛡️');">
+          <i class="bi bi-check2"></i> Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 5: Agency Consolidated ROI -->
+  <div class="dash-modal" id="agencyRoiModal" role="dialog" aria-modal="true">
+    <div class="dash-modal-backdrop" onclick="closeModal('agencyRoiModal');"></div>
+    <div class="dash-modal-dialog">
+      <div class="dash-modal-header">
+        <h3 class="dash-modal-title"><i class="bi bi-graph-up text-primary"></i> Agency Master P&amp;L &bull; Q4 Performance</h3>
+        <button class="dash-modal-close" onclick="closeModal('agencyRoiModal');">&times;</button>
+      </div>
+      <div class="dash-modal-body">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="background: rgba(10, 10, 10, 0.7); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <span style="color: var(--text-dim); font-size: 0.8rem; display: block;">Total Ad Spend Managed</span>
+            <strong style="color: #FFF; font-size: 1.5rem;">₹1.84 Crores</strong>
+          </div>
+          <div style="background: rgba(10, 10, 10, 0.7); padding: 1.25rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <span style="color: var(--text-dim); font-size: 0.8rem; display: block;">Attributed Client Revenue</span>
+            <strong style="color: #34D399; font-size: 1.5rem;">₹8.83 Crores</strong>
+          </div>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">
+          Consolidated portfolio return on ad spend across 48 retained brands is <strong>4.80x</strong>. All client campaigns are operating within agreed SLA thresholds.
+        </p>
+      </div>
+      <div class="dash-modal-footer">
+        <button class="btn btn-outline btn-sm" onclick="exportAdminDataCSV();">Download P&amp;L CSV</button>
+        <button class="btn btn-primary btn-sm" onclick="closeModal('agencyRoiModal');">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Sidebar Backdrop -->
+  <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+  <div class="toast-notification" id="toast" role="status" aria-live="polite"></div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
